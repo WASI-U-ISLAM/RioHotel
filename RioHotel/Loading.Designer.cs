@@ -57,9 +57,9 @@
             this.riohotelLabel.ForeColor = System.Drawing.Color.PaleGoldenrod;
             this.riohotelLabel.Location = new System.Drawing.Point(247, 288);
             this.riohotelLabel.Name = "riohotelLabel";
-            this.riohotelLabel.Size = new System.Drawing.Size(285, 55);
+            this.riohotelLabel.Size = new System.Drawing.Size(297, 55);
             this.riohotelLabel.TabIndex = 1;
-            this.riohotelLabel.Text = "RIOHOTEL";
+            this.riohotelLabel.Text = "RIO HOTEL";
             // 
             // panel1
             // 
