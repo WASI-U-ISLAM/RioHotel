@@ -15,11 +15,12 @@ namespace RioHotel
         public Loading()
         {
             InitializeComponent();
+            timer1.Start(); // Ensure the timer starts
         }
 
         private void Loading_Load(object sender, EventArgs e)
         {
-
+            // Optional: Any additional setup for loading screen
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -28,10 +29,17 @@ namespace RioHotel
 
             if (panel2.Width >= 800)
             {
-                timer1.Stop();
-                //loginForm lf = new loginForm();
-                //lf.ShowDialog();
+                timer1.Stop(); // Corrected from panel2.Stop()
+
+                // Hide the Loading form
                 this.Hide();
+
+                // Ensure the Login form exists before calling it
+                Login lp = new Login();
+                lp.ShowDialog();
+
+                // Close the Loading form after Login is closed
+                this.Close();
             }
         }
     }
