@@ -23,31 +23,10 @@ namespace RioHotel
             usernamewarnLabel.Visible = false;
             passwarnLabel.Visible = false;
         }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-            hideButton.Visible = false;
-            showButton.Visible = true;
-            passTextBox.UseSystemPasswordChar = true;
-        }
-
         private void usernameTextBox_TextChanged(object sender, EventArgs e) { }
         private void passTextBox_TextChanged(object sender, EventArgs e) { }
         private void panel1_Paint(object sender, PaintEventArgs e) { }
         private void logintoLabel_Click(object sender, EventArgs e) { }
-        private void showButton_Click(object sender, EventArgs e)
-        {
-            passTextBox.UseSystemPasswordChar = false;
-            showButton.Visible = false;
-            hideButton.Visible = true;
-        }
-
-        private void hideButton_Click(object sender, EventArgs e)
-        {
-            passTextBox.UseSystemPasswordChar = true;
-            hideButton.Visible = false;
-            showButton.Visible = true;
-        }
 
         private void nextButton_Click(object sender, EventArgs e)
         {
@@ -78,10 +57,11 @@ namespace RioHotel
                             if (empCount > 0)
                             {
                                 MessageBox.Show("Employee login successful! Redirecting to Home.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                this.Hide(); // Hide login form
                                 Home homePage = new Home();
-                                homePage.Show();
-                                //this.Hide();
-                                //this.Close();
+                                homePage.ShowDialog(); // Keep login form alive in the background
+                                this.Show(); // Show login form again after Home is closed
                                 return;
                             }
                         }
@@ -95,10 +75,11 @@ namespace RioHotel
                             if (adminCount > 0)
                             {
                                 MessageBox.Show("Admin login successful! Redirecting to Admin page.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                this.Hide(); // Hide login form
                                 Admin adminPage = new Admin();
-                                adminPage.Show();
-                                //this.Hide();
-                                //this.Close();
+                                adminPage.ShowDialog(); // Keep login form alive in the background
+                                this.Show(); // Show login form again after Admin is closed
                                 return;
                             }
                         }
@@ -113,6 +94,7 @@ namespace RioHotel
             }
         }
 
+
         private void cancelButton_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure you want to exit the application?", "Confirm Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -120,6 +102,20 @@ namespace RioHotel
             {
                 Application.Exit();
             }
+        }
+
+        private void showButton_Click_1(object sender, EventArgs e)
+        {
+            passTextBox.UseSystemPasswordChar = false;
+            showButton.Visible = false;
+            hideButton.Visible = true;
+        }
+
+        private void hideButton_Click_1(object sender, EventArgs e)
+        {
+            passTextBox.UseSystemPasswordChar = true;
+            hideButton.Visible = false;
+            showButton.Visible = true;
         }
     }
 }

@@ -33,6 +33,7 @@
             this.welcometoLabel = new System.Windows.Forms.Label();
             this.rhmsLabel = new System.Windows.Forms.Label();
             this.loginPanel = new System.Windows.Forms.Panel();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.passwarnLabel = new System.Windows.Forms.Label();
             this.usernamewarnLabel = new System.Windows.Forms.Label();
             this.showButton = new System.Windows.Forms.Button();
@@ -43,7 +44,6 @@
             this.usernameLabel = new System.Windows.Forms.Label();
             this.logintoLabel = new System.Windows.Forms.Label();
             this.hideButton = new System.Windows.Forms.Button();
-            this.cancelButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.loginPanel.SuspendLayout();
             this.SuspendLayout();
@@ -99,7 +99,20 @@
             this.loginPanel.Name = "loginPanel";
             this.loginPanel.Size = new System.Drawing.Size(391, 478);
             this.loginPanel.TabIndex = 3;
-            //this.loginPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.BackColor = System.Drawing.Color.Moccasin;
+            this.cancelButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cancelButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelButton.Location = new System.Drawing.Point(99, 297);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(92, 33);
+            this.cancelButton.TabIndex = 11;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = false;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // passwarnLabel
             // 
@@ -135,7 +148,7 @@
             this.showButton.Size = new System.Drawing.Size(37, 32);
             this.showButton.TabIndex = 7;
             this.showButton.UseVisualStyleBackColor = false;
-            //this.showButton.Click += new System.EventHandler(this.showButton_Click);
+            this.showButton.Click += new System.EventHandler(this.showButton_Click_1);
             // 
             // nextButton
             // 
@@ -159,7 +172,6 @@
             this.passTextBox.Size = new System.Drawing.Size(142, 32);
             this.passTextBox.TabIndex = 4;
             this.passTextBox.UseSystemPasswordChar = true;
-            //this.passTextBox.TextChanged += new System.EventHandler(this.passTextBox_TextChanged);
             // 
             // usernameTextBox
             // 
@@ -168,7 +180,6 @@
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(142, 32);
             this.usernameTextBox.TabIndex = 3;
-            //this.usernameTextBox.TextChanged += new System.EventHandler(this.usernameTextBox_TextChanged);
             // 
             // passLabel
             // 
@@ -203,7 +214,6 @@
             this.logintoLabel.Size = new System.Drawing.Size(296, 31);
             this.logintoLabel.TabIndex = 0;
             this.logintoLabel.Text = "Log-In To Your Account";
-            //this.logintoLabel.Click += new System.EventHandler(this.logintoLabel_Click);
             // 
             // hideButton
             // 
@@ -218,21 +228,7 @@
             this.hideButton.Size = new System.Drawing.Size(37, 32);
             this.hideButton.TabIndex = 8;
             this.hideButton.UseVisualStyleBackColor = false;
-            //this.hideButton.Click += new System.EventHandler(this.hideButton_Click);
-            // 
-            // cancelButton
-            // 
-            this.cancelButton.BackColor = System.Drawing.Color.Moccasin;
-            this.cancelButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cancelButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelButton.Location = new System.Drawing.Point(99, 297);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(92, 33);
-            this.cancelButton.TabIndex = 11;
-            this.cancelButton.Text = "Cancel";
-            this.cancelButton.UseVisualStyleBackColor = false;
-            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+            this.hideButton.Click += new System.EventHandler(this.hideButton_Click_1);
             // 
             // Login
             // 
@@ -249,8 +245,6 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            //this.Load += new System.EventHandler(this.Login_Load);
-
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.loginPanel.ResumeLayout(false);
             this.loginPanel.PerformLayout();

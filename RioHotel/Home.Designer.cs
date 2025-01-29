@@ -100,7 +100,6 @@
             this.label1.Size = new System.Drawing.Size(125, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Admin Panel";
-           // this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // sidePnl
             // 
@@ -305,8 +304,8 @@
             this.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Home";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
-            //this.Load += new System.EventHandler(this.Home_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.sidePnl.ResumeLayout(false);
