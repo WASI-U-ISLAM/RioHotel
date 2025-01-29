@@ -17,6 +17,8 @@ namespace RioHotel
             InitializeComponent();
             hideButton.Visible = false; // Ensure hideButton is initially hidden
             passTextBox.UseSystemPasswordChar = true; // Ensure password is hidden initially
+            usernamewarnLabel.Visible = false;
+            passwarnLabel.Visible = false;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -78,12 +80,25 @@ namespace RioHotel
 
         private void nextButton_Click(object sender, EventArgs e)
         {
+            // Check if the username text box is empty
+            if (string.IsNullOrWhiteSpace(usernameTextBox.Text))
+            {
+                usernamewarnLabel.Visible = true; // Show the username warning label
+            }
+            else
+            {
+                usernamewarnLabel.Visible = false; // Hide the username warning label
+            }
 
-            Home home = new Home();
-            home.Show();
-
-
-            
+            // Check if the password text box is empty
+            if (string.IsNullOrWhiteSpace(passTextBox.Text))
+            {
+                passwarnLabel.Visible = true; // Show the password warning label
+            }
+            else
+            {
+                passwarnLabel.Visible = false; // Hide the password warning label
+            }
         }
     }
 }
