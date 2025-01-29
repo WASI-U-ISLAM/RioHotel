@@ -32,17 +32,18 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.welcometoLabel = new System.Windows.Forms.Label();
             this.rhmsLabel = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.logintoLabel = new System.Windows.Forms.Label();
-            this.usernameLabel = new System.Windows.Forms.Label();
-            this.passLabel = new System.Windows.Forms.Label();
-            this.usernameTextBox = new System.Windows.Forms.TextBox();
-            this.passTextBox = new System.Windows.Forms.TextBox();
-            this.canclebutton = new System.Windows.Forms.Button();
+            this.loginPanel = new System.Windows.Forms.Panel();
+            this.hideButton = new System.Windows.Forms.Button();
+            this.showButton = new System.Windows.Forms.Button();
             this.nextButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.canclebutton = new System.Windows.Forms.Button();
+            this.passTextBox = new System.Windows.Forms.TextBox();
+            this.usernameTextBox = new System.Windows.Forms.TextBox();
+            this.passLabel = new System.Windows.Forms.Label();
+            this.usernameLabel = new System.Windows.Forms.Label();
+            this.logintoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.loginPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -78,22 +79,120 @@
             this.rhmsLabel.TabIndex = 2;
             this.rhmsLabel.Text = "Rio Hotel Management System";
             // 
-            // panel1
+            // loginPanel
             // 
-            this.panel1.BackColor = System.Drawing.Color.Cornsilk;
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.nextButton);
-            this.panel1.Controls.Add(this.canclebutton);
-            this.panel1.Controls.Add(this.passTextBox);
-            this.panel1.Controls.Add(this.usernameTextBox);
-            this.panel1.Controls.Add(this.passLabel);
-            this.panel1.Controls.Add(this.usernameLabel);
-            this.panel1.Controls.Add(this.logintoLabel);
-            this.panel1.Location = new System.Drawing.Point(650, 155);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(391, 478);
-            this.panel1.TabIndex = 3;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.loginPanel.BackColor = System.Drawing.Color.Cornsilk;
+            this.loginPanel.Controls.Add(this.showButton);
+            this.loginPanel.Controls.Add(this.nextButton);
+            this.loginPanel.Controls.Add(this.canclebutton);
+            this.loginPanel.Controls.Add(this.passTextBox);
+            this.loginPanel.Controls.Add(this.usernameTextBox);
+            this.loginPanel.Controls.Add(this.passLabel);
+            this.loginPanel.Controls.Add(this.usernameLabel);
+            this.loginPanel.Controls.Add(this.logintoLabel);
+            this.loginPanel.Controls.Add(this.hideButton);
+            this.loginPanel.Location = new System.Drawing.Point(650, 155);
+            this.loginPanel.Name = "loginPanel";
+            this.loginPanel.Size = new System.Drawing.Size(391, 478);
+            this.loginPanel.TabIndex = 3;
+            this.loginPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // hideButton
+            // 
+            this.hideButton.BackColor = System.Drawing.Color.White;
+            this.hideButton.BackgroundImage = global::RioHotel.Properties.Resources.hidden;
+            this.hideButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.hideButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.hideButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.hideButton.ForeColor = System.Drawing.Color.Transparent;
+            this.hideButton.Location = new System.Drawing.Point(299, 196);
+            this.hideButton.Name = "hideButton";
+            this.hideButton.Size = new System.Drawing.Size(37, 32);
+            this.hideButton.TabIndex = 8;
+            this.hideButton.UseVisualStyleBackColor = false;
+            this.hideButton.Click += new System.EventHandler(this.hideButton_Click);
+            // 
+            // showButton
+            // 
+            this.showButton.BackColor = System.Drawing.Color.White;
+            this.showButton.BackgroundImage = global::RioHotel.Properties.Resources.eye;
+            this.showButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.showButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.showButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.showButton.Location = new System.Drawing.Point(299, 196);
+            this.showButton.Name = "showButton";
+            this.showButton.Size = new System.Drawing.Size(37, 32);
+            this.showButton.TabIndex = 7;
+            this.showButton.UseVisualStyleBackColor = false;
+            this.showButton.Click += new System.EventHandler(this.showButton_Click);
+            // 
+            // nextButton
+            // 
+            this.nextButton.BackColor = System.Drawing.Color.Khaki;
+            this.nextButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nextButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.nextButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextButton.Location = new System.Drawing.Point(215, 276);
+            this.nextButton.Name = "nextButton";
+            this.nextButton.Size = new System.Drawing.Size(87, 33);
+            this.nextButton.TabIndex = 6;
+            this.nextButton.Text = "Next";
+            this.nextButton.UseVisualStyleBackColor = false;
+            // 
+            // canclebutton
+            // 
+            this.canclebutton.BackColor = System.Drawing.Color.Moccasin;
+            this.canclebutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.canclebutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.canclebutton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.canclebutton.Location = new System.Drawing.Point(96, 276);
+            this.canclebutton.Name = "canclebutton";
+            this.canclebutton.Size = new System.Drawing.Size(92, 33);
+            this.canclebutton.TabIndex = 5;
+            this.canclebutton.Text = "Cancle";
+            this.canclebutton.UseVisualStyleBackColor = false;
+            this.canclebutton.Click += new System.EventHandler(this.canclebutton_Click);
+            // 
+            // passTextBox
+            // 
+            this.passTextBox.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passTextBox.Location = new System.Drawing.Point(160, 196);
+            this.passTextBox.Name = "passTextBox";
+            this.passTextBox.Size = new System.Drawing.Size(142, 32);
+            this.passTextBox.TabIndex = 4;
+            this.passTextBox.UseSystemPasswordChar = true;
+            this.passTextBox.TextChanged += new System.EventHandler(this.passTextBox_TextChanged);
+            // 
+            // usernameTextBox
+            // 
+            this.usernameTextBox.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameTextBox.Location = new System.Drawing.Point(160, 111);
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(142, 32);
+            this.usernameTextBox.TabIndex = 3;
+            this.usernameTextBox.TextChanged += new System.EventHandler(this.usernameTextBox_TextChanged);
+            // 
+            // passLabel
+            // 
+            this.passLabel.AutoSize = true;
+            this.passLabel.BackColor = System.Drawing.Color.Transparent;
+            this.passLabel.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passLabel.Location = new System.Drawing.Point(46, 199);
+            this.passLabel.Name = "passLabel";
+            this.passLabel.Size = new System.Drawing.Size(108, 24);
+            this.passLabel.TabIndex = 2;
+            this.passLabel.Text = "Password :";
+            // 
+            // usernameLabel
+            // 
+            this.usernameLabel.AutoSize = true;
+            this.usernameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.usernameLabel.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameLabel.Location = new System.Drawing.Point(42, 114);
+            this.usernameLabel.Name = "usernameLabel";
+            this.usernameLabel.Size = new System.Drawing.Size(112, 24);
+            this.usernameLabel.TabIndex = 1;
+            this.usernameLabel.Text = "Username :";
             // 
             // logintoLabel
             // 
@@ -108,85 +207,13 @@
             this.logintoLabel.Text = "Log-In To Your Account";
             this.logintoLabel.Click += new System.EventHandler(this.logintoLabel_Click);
             // 
-            // usernameLabel
-            // 
-            this.usernameLabel.AutoSize = true;
-            this.usernameLabel.BackColor = System.Drawing.Color.Transparent;
-            this.usernameLabel.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.Location = new System.Drawing.Point(42, 114);
-            this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(112, 24);
-            this.usernameLabel.TabIndex = 1;
-            this.usernameLabel.Text = "Username :";
-            // 
-            // passLabel
-            // 
-            this.passLabel.AutoSize = true;
-            this.passLabel.BackColor = System.Drawing.Color.Transparent;
-            this.passLabel.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passLabel.Location = new System.Drawing.Point(46, 199);
-            this.passLabel.Name = "passLabel";
-            this.passLabel.Size = new System.Drawing.Size(108, 24);
-            this.passLabel.TabIndex = 2;
-            this.passLabel.Text = "Password :";
-            // 
-            // usernameTextBox
-            // 
-            this.usernameTextBox.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameTextBox.Location = new System.Drawing.Point(160, 111);
-            this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(162, 32);
-            this.usernameTextBox.TabIndex = 3;
-            // 
-            // passTextBox
-            // 
-            this.passTextBox.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passTextBox.Location = new System.Drawing.Point(160, 196);
-            this.passTextBox.Name = "passTextBox";
-            this.passTextBox.Size = new System.Drawing.Size(142, 32);
-            this.passTextBox.TabIndex = 4;
-            this.passTextBox.UseSystemPasswordChar = true;
-            // 
-            // canclebutton
-            // 
-            this.canclebutton.BackColor = System.Drawing.Color.Moccasin;
-            this.canclebutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.canclebutton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.canclebutton.Location = new System.Drawing.Point(96, 276);
-            this.canclebutton.Name = "canclebutton";
-            this.canclebutton.Size = new System.Drawing.Size(92, 33);
-            this.canclebutton.TabIndex = 5;
-            this.canclebutton.Text = "Cancle";
-            this.canclebutton.UseVisualStyleBackColor = false;
-            this.canclebutton.Click += new System.EventHandler(this.canclebutton_Click);
-            // 
-            // nextButton
-            // 
-            this.nextButton.BackColor = System.Drawing.Color.Khaki;
-            this.nextButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.nextButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextButton.Location = new System.Drawing.Point(215, 276);
-            this.nextButton.Name = "nextButton";
-            this.nextButton.Size = new System.Drawing.Size(87, 33);
-            this.nextButton.TabIndex = 6;
-            this.nextButton.Text = "Next";
-            this.nextButton.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(301, 194);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(37, 35);
-            this.button1.TabIndex = 7;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::RioHotel.Properties.Resources.BG;
             this.ClientSize = new System.Drawing.Size(1084, 628);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.loginPanel);
             this.Controls.Add(this.rhmsLabel);
             this.Controls.Add(this.welcometoLabel);
             this.Controls.Add(this.pictureBox1);
@@ -196,8 +223,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.loginPanel.ResumeLayout(false);
+            this.loginPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,7 +235,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label welcometoLabel;
         private System.Windows.Forms.Label rhmsLabel;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel loginPanel;
         private System.Windows.Forms.Label logintoLabel;
         private System.Windows.Forms.TextBox passTextBox;
         private System.Windows.Forms.TextBox usernameTextBox;
@@ -216,6 +243,7 @@
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.Button nextButton;
         private System.Windows.Forms.Button canclebutton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button showButton;
+        private System.Windows.Forms.Button hideButton;
     }
 }
