@@ -33,17 +33,17 @@
             this.welcometoLabel = new System.Windows.Forms.Label();
             this.rhmsLabel = new System.Windows.Forms.Label();
             this.loginPanel = new System.Windows.Forms.Panel();
+            this.passwarnLabel = new System.Windows.Forms.Label();
+            this.usernamewarnLabel = new System.Windows.Forms.Label();
             this.showButton = new System.Windows.Forms.Button();
             this.nextButton = new System.Windows.Forms.Button();
-            this.canclebutton = new System.Windows.Forms.Button();
             this.passTextBox = new System.Windows.Forms.TextBox();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.passLabel = new System.Windows.Forms.Label();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.logintoLabel = new System.Windows.Forms.Label();
             this.hideButton = new System.Windows.Forms.Button();
-            this.usernamewarnLabel = new System.Windows.Forms.Label();
-            this.passwarnLabel = new System.Windows.Forms.Label();
+            this.cancelButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.loginPanel.SuspendLayout();
             this.SuspendLayout();
@@ -84,11 +84,11 @@
             // loginPanel
             // 
             this.loginPanel.BackColor = System.Drawing.Color.Cornsilk;
+            this.loginPanel.Controls.Add(this.cancelButton);
             this.loginPanel.Controls.Add(this.passwarnLabel);
             this.loginPanel.Controls.Add(this.usernamewarnLabel);
             this.loginPanel.Controls.Add(this.showButton);
             this.loginPanel.Controls.Add(this.nextButton);
-            this.loginPanel.Controls.Add(this.canclebutton);
             this.loginPanel.Controls.Add(this.passTextBox);
             this.loginPanel.Controls.Add(this.usernameTextBox);
             this.loginPanel.Controls.Add(this.passLabel);
@@ -99,7 +99,29 @@
             this.loginPanel.Name = "loginPanel";
             this.loginPanel.Size = new System.Drawing.Size(391, 478);
             this.loginPanel.TabIndex = 3;
-            this.loginPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            //this.loginPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // passwarnLabel
+            // 
+            this.passwarnLabel.AutoSize = true;
+            this.passwarnLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwarnLabel.ForeColor = System.Drawing.Color.Red;
+            this.passwarnLabel.Location = new System.Drawing.Point(160, 252);
+            this.passwarnLabel.Name = "passwarnLabel";
+            this.passwarnLabel.Size = new System.Drawing.Size(200, 21);
+            this.passwarnLabel.TabIndex = 10;
+            this.passwarnLabel.Text = "You didn\'t fill Password !";
+            // 
+            // usernamewarnLabel
+            // 
+            this.usernamewarnLabel.AutoSize = true;
+            this.usernamewarnLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernamewarnLabel.ForeColor = System.Drawing.Color.Red;
+            this.usernamewarnLabel.Location = new System.Drawing.Point(160, 160);
+            this.usernamewarnLabel.Name = "usernamewarnLabel";
+            this.usernamewarnLabel.Size = new System.Drawing.Size(196, 21);
+            this.usernamewarnLabel.TabIndex = 9;
+            this.usernamewarnLabel.Text = "You didn\'t fill username !";
             // 
             // showButton
             // 
@@ -113,7 +135,7 @@
             this.showButton.Size = new System.Drawing.Size(37, 32);
             this.showButton.TabIndex = 7;
             this.showButton.UseVisualStyleBackColor = false;
-            this.showButton.Click += new System.EventHandler(this.showButton_Click);
+            //this.showButton.Click += new System.EventHandler(this.showButton_Click);
             // 
             // nextButton
             // 
@@ -129,20 +151,6 @@
             this.nextButton.UseVisualStyleBackColor = false;
             this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
-            // canclebutton
-            // 
-            this.canclebutton.BackColor = System.Drawing.Color.Moccasin;
-            this.canclebutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.canclebutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.canclebutton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.canclebutton.Location = new System.Drawing.Point(96, 297);
-            this.canclebutton.Name = "canclebutton";
-            this.canclebutton.Size = new System.Drawing.Size(92, 33);
-            this.canclebutton.TabIndex = 5;
-            this.canclebutton.Text = "Cancle";
-            this.canclebutton.UseVisualStyleBackColor = false;
-            this.canclebutton.Click += new System.EventHandler(this.canclebutton_Click);
-            // 
             // passTextBox
             // 
             this.passTextBox.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -151,7 +159,7 @@
             this.passTextBox.Size = new System.Drawing.Size(142, 32);
             this.passTextBox.TabIndex = 4;
             this.passTextBox.UseSystemPasswordChar = true;
-            this.passTextBox.TextChanged += new System.EventHandler(this.passTextBox_TextChanged);
+            //this.passTextBox.TextChanged += new System.EventHandler(this.passTextBox_TextChanged);
             // 
             // usernameTextBox
             // 
@@ -160,7 +168,7 @@
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(142, 32);
             this.usernameTextBox.TabIndex = 3;
-            this.usernameTextBox.TextChanged += new System.EventHandler(this.usernameTextBox_TextChanged);
+            //this.usernameTextBox.TextChanged += new System.EventHandler(this.usernameTextBox_TextChanged);
             // 
             // passLabel
             // 
@@ -195,7 +203,7 @@
             this.logintoLabel.Size = new System.Drawing.Size(296, 31);
             this.logintoLabel.TabIndex = 0;
             this.logintoLabel.Text = "Log-In To Your Account";
-            this.logintoLabel.Click += new System.EventHandler(this.logintoLabel_Click);
+            //this.logintoLabel.Click += new System.EventHandler(this.logintoLabel_Click);
             // 
             // hideButton
             // 
@@ -210,29 +218,21 @@
             this.hideButton.Size = new System.Drawing.Size(37, 32);
             this.hideButton.TabIndex = 8;
             this.hideButton.UseVisualStyleBackColor = false;
-            this.hideButton.Click += new System.EventHandler(this.hideButton_Click);
+            //this.hideButton.Click += new System.EventHandler(this.hideButton_Click);
             // 
-            // usernamewarnLabel
+            // cancelButton
             // 
-            this.usernamewarnLabel.AutoSize = true;
-            this.usernamewarnLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernamewarnLabel.ForeColor = System.Drawing.Color.Red;
-            this.usernamewarnLabel.Location = new System.Drawing.Point(160, 160);
-            this.usernamewarnLabel.Name = "usernamewarnLabel";
-            this.usernamewarnLabel.Size = new System.Drawing.Size(196, 21);
-            this.usernamewarnLabel.TabIndex = 9;
-            this.usernamewarnLabel.Text = "You didn\'t fill username !";
-            // 
-            // passwarnLabel
-            // 
-            this.passwarnLabel.AutoSize = true;
-            this.passwarnLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwarnLabel.ForeColor = System.Drawing.Color.Red;
-            this.passwarnLabel.Location = new System.Drawing.Point(160, 252);
-            this.passwarnLabel.Name = "passwarnLabel";
-            this.passwarnLabel.Size = new System.Drawing.Size(200, 21);
-            this.passwarnLabel.TabIndex = 10;
-            this.passwarnLabel.Text = "You didn\'t fill Password !";
+            this.cancelButton.BackColor = System.Drawing.Color.Moccasin;
+            this.cancelButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cancelButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelButton.Location = new System.Drawing.Point(99, 297);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(92, 33);
+            this.cancelButton.TabIndex = 11;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = false;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // Login
             // 
@@ -249,7 +249,8 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Login_Load_1);
+            //this.Load += new System.EventHandler(this.Login_Load);
+
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.loginPanel.ResumeLayout(false);
             this.loginPanel.PerformLayout();
@@ -270,10 +271,10 @@
         private System.Windows.Forms.Label passLabel;
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.Button nextButton;
-        private System.Windows.Forms.Button canclebutton;
         private System.Windows.Forms.Button showButton;
         private System.Windows.Forms.Button hideButton;
         private System.Windows.Forms.Label passwarnLabel;
         private System.Windows.Forms.Label usernamewarnLabel;
+        private System.Windows.Forms.Button cancelButton;
     }
 }
