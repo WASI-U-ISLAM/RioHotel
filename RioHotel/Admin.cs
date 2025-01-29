@@ -10,14 +10,24 @@ using System.Windows.Forms;
 
 namespace RioHotel
 {
-    public partial class Registration : Form
+    public partial class Admin : Form
     {
-        public Registration()
+        public Admin()
         {
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void Admin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }
