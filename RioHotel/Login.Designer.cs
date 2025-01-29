@@ -33,7 +33,6 @@
             this.welcometoLabel = new System.Windows.Forms.Label();
             this.rhmsLabel = new System.Windows.Forms.Label();
             this.loginPanel = new System.Windows.Forms.Panel();
-            this.hideButton = new System.Windows.Forms.Button();
             this.showButton = new System.Windows.Forms.Button();
             this.nextButton = new System.Windows.Forms.Button();
             this.canclebutton = new System.Windows.Forms.Button();
@@ -42,6 +41,7 @@
             this.passLabel = new System.Windows.Forms.Label();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.logintoLabel = new System.Windows.Forms.Label();
+            this.hideButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.loginPanel.SuspendLayout();
             this.SuspendLayout();
@@ -97,21 +97,6 @@
             this.loginPanel.TabIndex = 3;
             this.loginPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // hideButton
-            // 
-            this.hideButton.BackColor = System.Drawing.Color.White;
-            this.hideButton.BackgroundImage = global::RioHotel.Properties.Resources.hidden;
-            this.hideButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.hideButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.hideButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.hideButton.ForeColor = System.Drawing.Color.Transparent;
-            this.hideButton.Location = new System.Drawing.Point(299, 196);
-            this.hideButton.Name = "hideButton";
-            this.hideButton.Size = new System.Drawing.Size(37, 32);
-            this.hideButton.TabIndex = 8;
-            this.hideButton.UseVisualStyleBackColor = false;
-            this.hideButton.Click += new System.EventHandler(this.hideButton_Click);
-            // 
             // showButton
             // 
             this.showButton.BackColor = System.Drawing.Color.White;
@@ -138,6 +123,7 @@
             this.nextButton.TabIndex = 6;
             this.nextButton.Text = "Next";
             this.nextButton.UseVisualStyleBackColor = false;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
             // canclebutton
             // 
@@ -207,6 +193,21 @@
             this.logintoLabel.Text = "Log-In To Your Account";
             this.logintoLabel.Click += new System.EventHandler(this.logintoLabel_Click);
             // 
+            // hideButton
+            // 
+            this.hideButton.BackColor = System.Drawing.Color.White;
+            this.hideButton.BackgroundImage = global::RioHotel.Properties.Resources.hidden;
+            this.hideButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.hideButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.hideButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.hideButton.ForeColor = System.Drawing.Color.Transparent;
+            this.hideButton.Location = new System.Drawing.Point(299, 196);
+            this.hideButton.Name = "hideButton";
+            this.hideButton.Size = new System.Drawing.Size(37, 32);
+            this.hideButton.TabIndex = 8;
+            this.hideButton.UseVisualStyleBackColor = false;
+            this.hideButton.Click += new System.EventHandler(this.hideButton_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -222,6 +223,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.loginPanel.ResumeLayout(false);
             this.loginPanel.PerformLayout();
