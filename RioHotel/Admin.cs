@@ -16,12 +16,6 @@ namespace RioHotel
         {
             InitializeComponent();
         }
-
-        private void Admin_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -62,6 +56,16 @@ namespace RioHotel
         private void minimizeButton_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("do you want to Log out?", "logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (DialogResult.Yes == result)
+            {
+                //timer1.Stop();
+                this.Close();
+            }
         }
     }
 }

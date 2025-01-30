@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin Control\AC_Users.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Control\AC_Users.Designer.cs">
+      <DependentUpon>AC_Users.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin Control\AC_Users.resx">
+      <DependentUpon>AC_Users.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,5 +185,6 @@
   <ItemGroup>
     <None Include="Resources\time.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -39,6 +39,8 @@
             this.minimizeButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.usersButton = new System.Windows.Forms.Button();
+            this.aC_Users1 = new RioHotel.Admin_Control.AC_Users();
+            this.logoutButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -151,6 +153,7 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.BackColor = System.Drawing.Color.CadetBlue;
+            this.panel2.Controls.Add(this.logoutButton);
             this.panel2.Controls.Add(this.usersButton);
             this.panel2.Location = new System.Drawing.Point(-2, 142);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
@@ -164,12 +167,37 @@
             this.usersButton.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usersButton.ForeColor = System.Drawing.Color.PaleGoldenrod;
             this.usersButton.Image = global::RioHotel.Properties.Resources.BG;
-            this.usersButton.Location = new System.Drawing.Point(14, 15);
+            this.usersButton.Location = new System.Drawing.Point(75, 15);
             this.usersButton.Name = "usersButton";
-            this.usersButton.Size = new System.Drawing.Size(243, 67);
+            this.usersButton.Size = new System.Drawing.Size(182, 60);
             this.usersButton.TabIndex = 17;
             this.usersButton.Text = "Users\r\n";
             this.usersButton.UseVisualStyleBackColor = true;
+            // 
+            // aC_Users1
+            // 
+            this.aC_Users1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.aC_Users1.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.aC_Users1.Location = new System.Drawing.Point(275, 142);
+            this.aC_Users1.Name = "aC_Users1";
+            this.aC_Users1.Size = new System.Drawing.Size(803, 511);
+            this.aC_Users1.TabIndex = 17;
+            // 
+            // logoutButton
+            // 
+            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.logoutButton.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutButton.ForeColor = System.Drawing.Color.PaleGoldenrod;
+            this.logoutButton.Image = global::RioHotel.Properties.Resources.BG;
+            this.logoutButton.Location = new System.Drawing.Point(75, 334);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(182, 60);
+            this.logoutButton.TabIndex = 18;
+            this.logoutButton.Text = "Log Out";
+            this.logoutButton.UseVisualStyleBackColor = true;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // Admin
             // 
@@ -177,6 +205,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::RioHotel.Properties.Resources.BG;
             this.ClientSize = new System.Drawing.Size(1090, 666);
+            this.Controls.Add(this.aC_Users1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
@@ -186,7 +215,6 @@
             this.Name = "Admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
-            this.Load += new System.EventHandler(this.Admin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -208,5 +236,7 @@
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Button minimizeButton;
         private System.Windows.Forms.Button usersButton;
+        private Admin_Control.AC_Users aC_Users1;
+        private System.Windows.Forms.Button logoutButton;
     }
 }

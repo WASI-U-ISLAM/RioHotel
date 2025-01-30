@@ -121,7 +121,7 @@
             // 
             this.datetimeLabel.AutoSize = true;
             this.datetimeLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datetimeLabel.Location = new System.Drawing.Point(210, 110);
+            this.datetimeLabel.Location = new System.Drawing.Point(209, 110);
             this.datetimeLabel.Name = "datetimeLabel";
             this.datetimeLabel.Size = new System.Drawing.Size(24, 26);
             this.datetimeLabel.TabIndex = 1;
@@ -199,7 +199,7 @@
             this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizeButton.ForeColor = System.Drawing.Color.Transparent;
             this.minimizeButton.Image = global::RioHotel.Properties.Resources.minimize2;
-            this.minimizeButton.Location = new System.Drawing.Point(18, 1);
+            this.minimizeButton.Location = new System.Drawing.Point(19, 1);
             this.minimizeButton.Name = "minimizeButton";
             this.minimizeButton.Size = new System.Drawing.Size(37, 38);
             this.minimizeButton.TabIndex = 6;
