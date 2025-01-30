@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,41 +12,64 @@ namespace RioHotel
 {
     public partial class Home : Form
     {
+        public string Username;
+
         public Home()
         {
             InitializeComponent();
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
 
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void closeButton_Click(object sender, EventArgs e)
         {
-            if (sidePnl.Width == 200)
+            // Show a confirmation message box
+            DialogResult result = MessageBox.Show("Are you sure you want to exit the application?",
+                                                  "Confirm Exit",
+                                                  MessageBoxButtons.YesNo,
+                                                  MessageBoxIcon.Question);
+
+            // Check the user's choice
+            if (result == DialogResult.Yes)
             {
-                sidePnl.Width = 38;
-            } else
-            {
-                sidePnl.Width = 200;
+                Environment.Exit(1); // Exit the application
             }
         }
 
-        private void AdminPicBox_Click(object sender, EventArgs e)
+        private void minimizeButton_Click(object sender, EventArgs e)
         {
-            if (sidePnl.Width == 38)
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void maximizeButton_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Maximized)
             {
-                sidePnl.Width = 200;
+                WindowState = FormWindowState.Normal; // Restore if already maximized
             }
             else
             {
-                sidePnl.Width = 38;
+                WindowState = FormWindowState.Maximized; // Maximize if not already maximized
             }
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void datetimeLabel_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Login lp = new Login();
-            lp.ShowDialog();
+
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            datetimeLabel.Text = DateTime.Now.ToString("dd-MMM-yyyy  hh:mm:ss tt");
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+            usernamelabel.Text = Username;
+        }
     }
 }

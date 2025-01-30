@@ -60,6 +60,9 @@ namespace RioHotel
 
                                 this.Hide(); // Hide login form
                                 Home homePage = new Home();
+                                homePage.Username = usernameTextBox.Text;
+                                usernameTextBox.Clear();
+                                passTextBox.Clear();
                                 homePage.ShowDialog(); // Keep login form alive in the background
                                 this.Show(); // Show login form again after Home is closed
                                 return;
@@ -116,6 +119,26 @@ namespace RioHotel
             passTextBox.UseSystemPasswordChar = true;
             hideButton.Visible = false;
             showButton.Visible = true;
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            // Show a confirmation message box
+            DialogResult result = MessageBox.Show("Are you sure you want to exit the application?",
+                                                  "Confirm Exit",
+                                                  MessageBoxButtons.YesNo,
+                                                  MessageBoxIcon.Question);
+
+            // Check the user's choice
+            if (result == DialogResult.Yes)
+            {
+                Environment.Exit(1); // Exit the application
+            }
+        }
+
+        private void minimizeButton_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

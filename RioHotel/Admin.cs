@@ -31,5 +31,37 @@ namespace RioHotel
         {
 
         }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            // Show a confirmation message box
+            DialogResult result = MessageBox.Show("Are you sure you want to exit the application?",
+                                                  "Confirm Exit",
+                                                  MessageBoxButtons.YesNo,
+                                                  MessageBoxIcon.Question);
+
+            // Check the user's choice
+            if (result == DialogResult.Yes)
+            {
+                Environment.Exit(1); // Exit the application
+            }
+        }
+
+        private void maximizeButton_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Maximized)
+            {
+                WindowState = FormWindowState.Normal; // Restore if already maximized
+            }
+            else
+            {
+                WindowState = FormWindowState.Maximized; // Maximize if not already maximized
+            }
+        }
+
+        private void minimizeButton_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }

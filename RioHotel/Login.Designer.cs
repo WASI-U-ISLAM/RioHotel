@@ -44,8 +44,12 @@
             this.usernameLabel = new System.Windows.Forms.Label();
             this.logintoLabel = new System.Windows.Forms.Label();
             this.hideButton = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.closeButton = new System.Windows.Forms.Button();
+            this.minimizeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.loginPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -230,12 +234,49 @@
             this.hideButton.UseVisualStyleBackColor = false;
             this.hideButton.Click += new System.EventHandler(this.hideButton_Click_1);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.closeButton);
+            this.panel1.Controls.Add(this.minimizeButton);
+            this.panel1.Location = new System.Drawing.Point(1001, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(82, 37);
+            this.panel1.TabIndex = 4;
+            // 
+            // closeButton
+            // 
+            this.closeButton.BackColor = System.Drawing.Color.Transparent;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.closeButton.ForeColor = System.Drawing.Color.Transparent;
+            this.closeButton.Image = global::RioHotel.Properties.Resources.close;
+            this.closeButton.Location = new System.Drawing.Point(46, 0);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(36, 35);
+            this.closeButton.TabIndex = 5;
+            this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            // 
+            // minimizeButton
+            // 
+            this.minimizeButton.BackColor = System.Drawing.Color.Transparent;
+            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.minimizeButton.ForeColor = System.Drawing.Color.Transparent;
+            this.minimizeButton.Image = global::RioHotel.Properties.Resources.minimize;
+            this.minimizeButton.Location = new System.Drawing.Point(9, -3);
+            this.minimizeButton.Name = "minimizeButton";
+            this.minimizeButton.Size = new System.Drawing.Size(37, 38);
+            this.minimizeButton.TabIndex = 6;
+            this.minimizeButton.UseVisualStyleBackColor = false;
+            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::RioHotel.Properties.Resources.BG;
             this.ClientSize = new System.Drawing.Size(1084, 628);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.loginPanel);
             this.Controls.Add(this.rhmsLabel);
             this.Controls.Add(this.welcometoLabel);
@@ -248,6 +289,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.loginPanel.ResumeLayout(false);
             this.loginPanel.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,5 +312,8 @@
         private System.Windows.Forms.Label passwarnLabel;
         private System.Windows.Forms.Label usernamewarnLabel;
         private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button closeButton;
+        private System.Windows.Forms.Button minimizeButton;
     }
 }
