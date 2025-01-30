@@ -33,11 +33,11 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.maximizeButton = new System.Windows.Forms.Button();
-            this.minimizeButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
+            this.minimizeButton = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -91,17 +91,6 @@
             this.panel1.Size = new System.Drawing.Size(1093, 138);
             this.panel1.TabIndex = 15;
             // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel2.BackColor = System.Drawing.Color.CadetBlue;
-            this.panel2.Location = new System.Drawing.Point(-2, 142);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(272, 464);
-            this.panel2.TabIndex = 16;
-            // 
             // panel4
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -119,7 +108,7 @@
             this.maximizeButton.BackColor = System.Drawing.Color.Transparent;
             this.maximizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.maximizeButton.ForeColor = System.Drawing.Color.Transparent;
-            this.maximizeButton.Image = global::RioHotel.Properties.Resources.maximize;
+            this.maximizeButton.Image = global::RioHotel.Properties.Resources.maximize2;
             this.maximizeButton.Location = new System.Drawing.Point(61, -2);
             this.maximizeButton.Name = "maximizeButton";
             this.maximizeButton.Size = new System.Drawing.Size(36, 38);
@@ -127,12 +116,25 @@
             this.maximizeButton.UseVisualStyleBackColor = false;
             this.maximizeButton.Click += new System.EventHandler(this.maximizeButton_Click);
             // 
+            // closeButton
+            // 
+            this.closeButton.BackColor = System.Drawing.Color.Transparent;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.ForeColor = System.Drawing.Color.Transparent;
+            this.closeButton.Image = global::RioHotel.Properties.Resources.close2;
+            this.closeButton.Location = new System.Drawing.Point(100, -2);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(36, 38);
+            this.closeButton.TabIndex = 5;
+            this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            // 
             // minimizeButton
             // 
             this.minimizeButton.BackColor = System.Drawing.Color.Transparent;
             this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizeButton.ForeColor = System.Drawing.Color.Transparent;
-            this.minimizeButton.Image = global::RioHotel.Properties.Resources.minimize;
+            this.minimizeButton.Image = global::RioHotel.Properties.Resources.minimize2;
             this.minimizeButton.Location = new System.Drawing.Point(22, -2);
             this.minimizeButton.Name = "minimizeButton";
             this.minimizeButton.Size = new System.Drawing.Size(37, 38);
@@ -140,18 +142,16 @@
             this.minimizeButton.UseVisualStyleBackColor = false;
             this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
             // 
-            // closeButton
+            // panel2
             // 
-            this.closeButton.BackColor = System.Drawing.Color.Transparent;
-            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeButton.ForeColor = System.Drawing.Color.Transparent;
-            this.closeButton.Image = global::RioHotel.Properties.Resources.close;
-            this.closeButton.Location = new System.Drawing.Point(100, -2);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(36, 38);
-            this.closeButton.TabIndex = 5;
-            this.closeButton.UseVisualStyleBackColor = false;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel2.BackColor = System.Drawing.Color.CadetBlue;
+            this.panel2.Location = new System.Drawing.Point(-2, 142);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(272, 464);
+            this.panel2.TabIndex = 16;
             // 
             // Admin
             // 

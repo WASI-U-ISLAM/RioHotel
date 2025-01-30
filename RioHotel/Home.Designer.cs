@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.usernamelabel = new System.Windows.Forms.Label();
+            this.datetimeLabel = new System.Windows.Forms.Label();
+            this.welcomeLabel = new System.Windows.Forms.Label();
             this.RHMSLabel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -39,9 +42,6 @@
             this.minimizeButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.welcomeLabel = new System.Windows.Forms.Label();
-            this.datetimeLabel = new System.Windows.Forms.Label();
-            this.usernamelabel = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -64,6 +64,37 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1105, 174);
             this.panel1.TabIndex = 0;
+            // 
+            // usernamelabel
+            // 
+            this.usernamelabel.AutoSize = true;
+            this.usernamelabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernamelabel.Location = new System.Drawing.Point(294, 75);
+            this.usernamelabel.Name = "usernamelabel";
+            this.usernamelabel.Size = new System.Drawing.Size(24, 26);
+            this.usernamelabel.TabIndex = 8;
+            this.usernamelabel.Text = "?";
+            // 
+            // datetimeLabel
+            // 
+            this.datetimeLabel.AutoSize = true;
+            this.datetimeLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datetimeLabel.Location = new System.Drawing.Point(184, 115);
+            this.datetimeLabel.Name = "datetimeLabel";
+            this.datetimeLabel.Size = new System.Drawing.Size(24, 26);
+            this.datetimeLabel.TabIndex = 1;
+            this.datetimeLabel.Text = "?";
+            this.datetimeLabel.Click += new System.EventHandler(this.datetimeLabel_Click);
+            // 
+            // welcomeLabel
+            // 
+            this.welcomeLabel.AutoSize = true;
+            this.welcomeLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeLabel.Location = new System.Drawing.Point(180, 73);
+            this.welcomeLabel.Name = "welcomeLabel";
+            this.welcomeLabel.Size = new System.Drawing.Size(125, 26);
+            this.welcomeLabel.TabIndex = 7;
+            this.welcomeLabel.Text = "Welcome : ";
             // 
             // RHMSLabel
             // 
@@ -112,7 +143,7 @@
             this.maximizeButton.BackColor = System.Drawing.Color.Transparent;
             this.maximizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.maximizeButton.ForeColor = System.Drawing.Color.Transparent;
-            this.maximizeButton.Image = global::RioHotel.Properties.Resources.maximize;
+            this.maximizeButton.Image = global::RioHotel.Properties.Resources.maximize2;
             this.maximizeButton.Location = new System.Drawing.Point(60, 1);
             this.maximizeButton.Name = "maximizeButton";
             this.maximizeButton.Size = new System.Drawing.Size(36, 38);
@@ -125,7 +156,7 @@
             this.minimizeButton.BackColor = System.Drawing.Color.Transparent;
             this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizeButton.ForeColor = System.Drawing.Color.Transparent;
-            this.minimizeButton.Image = global::RioHotel.Properties.Resources.minimize;
+            this.minimizeButton.Image = global::RioHotel.Properties.Resources.minimize2;
             this.minimizeButton.Location = new System.Drawing.Point(21, 1);
             this.minimizeButton.Name = "minimizeButton";
             this.minimizeButton.Size = new System.Drawing.Size(37, 38);
@@ -138,10 +169,10 @@
             this.closeButton.BackColor = System.Drawing.Color.Transparent;
             this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closeButton.ForeColor = System.Drawing.Color.Transparent;
-            this.closeButton.Image = global::RioHotel.Properties.Resources.close;
-            this.closeButton.Location = new System.Drawing.Point(99, 1);
+            this.closeButton.Image = global::RioHotel.Properties.Resources.close2;
+            this.closeButton.Location = new System.Drawing.Point(102, 1);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(36, 38);
+            this.closeButton.Size = new System.Drawing.Size(33, 38);
             this.closeButton.TabIndex = 5;
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
@@ -155,37 +186,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(282, 475);
             this.panel2.TabIndex = 1;
-            // 
-            // welcomeLabel
-            // 
-            this.welcomeLabel.AutoSize = true;
-            this.welcomeLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeLabel.Location = new System.Drawing.Point(180, 73);
-            this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(125, 26);
-            this.welcomeLabel.TabIndex = 7;
-            this.welcomeLabel.Text = "Welcome : ";
-            // 
-            // datetimeLabel
-            // 
-            this.datetimeLabel.AutoSize = true;
-            this.datetimeLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datetimeLabel.Location = new System.Drawing.Point(184, 115);
-            this.datetimeLabel.Name = "datetimeLabel";
-            this.datetimeLabel.Size = new System.Drawing.Size(24, 26);
-            this.datetimeLabel.TabIndex = 1;
-            this.datetimeLabel.Text = "?";
-            this.datetimeLabel.Click += new System.EventHandler(this.datetimeLabel_Click);
-            // 
-            // usernamelabel
-            // 
-            this.usernamelabel.AutoSize = true;
-            this.usernamelabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernamelabel.Location = new System.Drawing.Point(294, 75);
-            this.usernamelabel.Name = "usernamelabel";
-            this.usernamelabel.Size = new System.Drawing.Size(24, 26);
-            this.usernamelabel.TabIndex = 8;
-            this.usernamelabel.Text = "?";
             // 
             // timer1
             // 

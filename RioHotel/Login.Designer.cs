@@ -249,7 +249,7 @@
             this.closeButton.BackColor = System.Drawing.Color.Transparent;
             this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.closeButton.ForeColor = System.Drawing.Color.Transparent;
-            this.closeButton.Image = global::RioHotel.Properties.Resources.close;
+            this.closeButton.Image = global::RioHotel.Properties.Resources.close2;
             this.closeButton.Location = new System.Drawing.Point(46, 0);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(36, 35);
@@ -262,7 +262,7 @@
             this.minimizeButton.BackColor = System.Drawing.Color.Transparent;
             this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.minimizeButton.ForeColor = System.Drawing.Color.Transparent;
-            this.minimizeButton.Image = global::RioHotel.Properties.Resources.minimize;
+            this.minimizeButton.Image = global::RioHotel.Properties.Resources.minimize2;
             this.minimizeButton.Location = new System.Drawing.Point(9, -3);
             this.minimizeButton.Name = "minimizeButton";
             this.minimizeButton.Size = new System.Drawing.Size(37, 38);
