@@ -19,6 +19,12 @@ namespace RioHotel
             InitializeComponent();
         }
 
+        private void MovePanel(Control btn)
+        {
+            movePanel.Top = btn.Top;
+            movePanel.Height = btn.Height;
+        }
+
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
@@ -70,6 +76,47 @@ namespace RioHotel
         {
             timer1.Start();
             usernamelabel.Text = Username;
+        }
+
+        private void movePanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dashboardButton_Click(object sender, EventArgs e)
+        {
+            MovePanel(dashboardButton);
+        }
+
+        private void roomsButton_Click(object sender, EventArgs e)
+        {
+            MovePanel(roomsButton);
+        }
+
+        private void bookingButton_Click(object sender, EventArgs e)
+        {
+            MovePanel(bookingButton);
+        }
+
+        private void guestsbutton_Click(object sender, EventArgs e)
+        {
+            MovePanel(guestsbutton);
+        }
+
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            MovePanel(logoutButton);
+            DialogResult result = MessageBox.Show("do you want to Log out?", "logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (DialogResult.Yes == result)
+            {
+                timer1.Stop();
+                this.Close();
+            }
+        }
+
+        private void usernamelabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.usernamelabel = new System.Windows.Forms.Label();
             this.datetimeLabel = new System.Windows.Forms.Label();
             this.welcomeLabel = new System.Windows.Forms.Label();
@@ -42,11 +44,30 @@
             this.minimizeButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.logoutButton = new System.Windows.Forms.Button();
+            this.movePanel = new System.Windows.Forms.Panel();
+            this.guestsbutton = new System.Windows.Forms.Button();
+            this.bookingButton = new System.Windows.Forms.Button();
+            this.roomsButton = new System.Windows.Forms.Button();
+            this.dashboardButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -54,6 +75,8 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.panel1.Controls.Add(this.pictureBox8);
+            this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.usernamelabel);
             this.panel1.Controls.Add(this.datetimeLabel);
             this.panel1.Controls.Add(this.welcomeLabel);
@@ -65,21 +88,40 @@
             this.panel1.Size = new System.Drawing.Size(1105, 174);
             this.panel1.TabIndex = 0;
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::RioHotel.Properties.Resources.time;
+            this.pictureBox8.Location = new System.Drawing.Point(182, 111);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(25, 27);
+            this.pictureBox8.TabIndex = 10;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::RioHotel.Properties.Resources.emp;
+            this.pictureBox5.Location = new System.Drawing.Point(182, 73);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(25, 27);
+            this.pictureBox5.TabIndex = 9;
+            this.pictureBox5.TabStop = false;
+            // 
             // usernamelabel
             // 
             this.usernamelabel.AutoSize = true;
             this.usernamelabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernamelabel.Location = new System.Drawing.Point(294, 75);
+            this.usernamelabel.Location = new System.Drawing.Point(319, 73);
             this.usernamelabel.Name = "usernamelabel";
             this.usernamelabel.Size = new System.Drawing.Size(24, 26);
             this.usernamelabel.TabIndex = 8;
             this.usernamelabel.Text = "?";
+            this.usernamelabel.Click += new System.EventHandler(this.usernamelabel_Click);
             // 
             // datetimeLabel
             // 
             this.datetimeLabel.AutoSize = true;
             this.datetimeLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datetimeLabel.Location = new System.Drawing.Point(184, 115);
+            this.datetimeLabel.Location = new System.Drawing.Point(210, 110);
             this.datetimeLabel.Name = "datetimeLabel";
             this.datetimeLabel.Size = new System.Drawing.Size(24, 26);
             this.datetimeLabel.TabIndex = 1;
@@ -90,7 +132,7 @@
             // 
             this.welcomeLabel.AutoSize = true;
             this.welcomeLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeLabel.Location = new System.Drawing.Point(180, 73);
+            this.welcomeLabel.Location = new System.Drawing.Point(206, 72);
             this.welcomeLabel.Name = "welcomeLabel";
             this.welcomeLabel.Size = new System.Drawing.Size(125, 26);
             this.welcomeLabel.TabIndex = 7;
@@ -144,7 +186,7 @@
             this.maximizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.maximizeButton.ForeColor = System.Drawing.Color.Transparent;
             this.maximizeButton.Image = global::RioHotel.Properties.Resources.maximize2;
-            this.maximizeButton.Location = new System.Drawing.Point(60, 1);
+            this.maximizeButton.Location = new System.Drawing.Point(59, 1);
             this.maximizeButton.Name = "maximizeButton";
             this.maximizeButton.Size = new System.Drawing.Size(36, 38);
             this.maximizeButton.TabIndex = 7;
@@ -157,7 +199,7 @@
             this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizeButton.ForeColor = System.Drawing.Color.Transparent;
             this.minimizeButton.Image = global::RioHotel.Properties.Resources.minimize2;
-            this.minimizeButton.Location = new System.Drawing.Point(21, 1);
+            this.minimizeButton.Location = new System.Drawing.Point(18, 1);
             this.minimizeButton.Name = "minimizeButton";
             this.minimizeButton.Size = new System.Drawing.Size(37, 38);
             this.minimizeButton.TabIndex = 6;
@@ -170,9 +212,9 @@
             this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closeButton.ForeColor = System.Drawing.Color.Transparent;
             this.closeButton.Image = global::RioHotel.Properties.Resources.close2;
-            this.closeButton.Location = new System.Drawing.Point(102, 1);
+            this.closeButton.Location = new System.Drawing.Point(98, 1);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(33, 38);
+            this.closeButton.Size = new System.Drawing.Size(37, 38);
             this.closeButton.TabIndex = 5;
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
@@ -182,10 +224,145 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.BackColor = System.Drawing.Color.Cornsilk;
+            this.panel2.Controls.Add(this.pictureBox7);
+            this.panel2.Controls.Add(this.pictureBox6);
+            this.panel2.Controls.Add(this.pictureBox4);
+            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.logoutButton);
+            this.panel2.Controls.Add(this.movePanel);
+            this.panel2.Controls.Add(this.guestsbutton);
+            this.panel2.Controls.Add(this.bookingButton);
+            this.panel2.Controls.Add(this.roomsButton);
+            this.panel2.Controls.Add(this.dashboardButton);
             this.panel2.Location = new System.Drawing.Point(1, 178);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(282, 475);
             this.panel2.TabIndex = 1;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::RioHotel.Properties.Resources.log_out;
+            this.pictureBox7.Location = new System.Drawing.Point(28, 287);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(33, 34);
+            this.pictureBox7.TabIndex = 9;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::RioHotel.Properties.Resources.guest;
+            this.pictureBox6.Location = new System.Drawing.Point(28, 224);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(33, 34);
+            this.pictureBox6.TabIndex = 8;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::RioHotel.Properties.Resources.booking;
+            this.pictureBox4.Location = new System.Drawing.Point(28, 158);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(33, 34);
+            this.pictureBox4.TabIndex = 7;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::RioHotel.Properties.Resources.rooms;
+            this.pictureBox3.Location = new System.Drawing.Point(26, 91);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(33, 34);
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::RioHotel.Properties.Resources.dashboard2;
+            this.pictureBox2.Location = new System.Drawing.Point(26, 29);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(33, 34);
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
+            // logoutButton
+            // 
+            this.logoutButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logoutButton.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutButton.ForeColor = System.Drawing.Color.PaleGoldenrod;
+            this.logoutButton.Image = global::RioHotel.Properties.Resources.BG;
+            this.logoutButton.Location = new System.Drawing.Point(71, 278);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(182, 52);
+            this.logoutButton.TabIndex = 4;
+            this.logoutButton.Text = "Log Out";
+            this.logoutButton.UseVisualStyleBackColor = true;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
+            // 
+            // movePanel
+            // 
+            this.movePanel.BackgroundImage = global::RioHotel.Properties.Resources.BG;
+            this.movePanel.Location = new System.Drawing.Point(259, 14);
+            this.movePanel.Name = "movePanel";
+            this.movePanel.Size = new System.Drawing.Size(14, 58);
+            this.movePanel.TabIndex = 2;
+            this.movePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.movePanel_Paint);
+            // 
+            // guestsbutton
+            // 
+            this.guestsbutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guestsbutton.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guestsbutton.ForeColor = System.Drawing.Color.PaleGoldenrod;
+            this.guestsbutton.Image = global::RioHotel.Properties.Resources.BG;
+            this.guestsbutton.Location = new System.Drawing.Point(71, 215);
+            this.guestsbutton.Name = "guestsbutton";
+            this.guestsbutton.Size = new System.Drawing.Size(182, 52);
+            this.guestsbutton.TabIndex = 3;
+            this.guestsbutton.Text = "Guests";
+            this.guestsbutton.UseVisualStyleBackColor = true;
+            this.guestsbutton.Click += new System.EventHandler(this.guestsbutton_Click);
+            // 
+            // bookingButton
+            // 
+            this.bookingButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bookingButton.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookingButton.ForeColor = System.Drawing.Color.PaleGoldenrod;
+            this.bookingButton.Image = global::RioHotel.Properties.Resources.BG;
+            this.bookingButton.Location = new System.Drawing.Point(71, 149);
+            this.bookingButton.Name = "bookingButton";
+            this.bookingButton.Size = new System.Drawing.Size(182, 52);
+            this.bookingButton.TabIndex = 2;
+            this.bookingButton.Text = "Booking";
+            this.bookingButton.UseVisualStyleBackColor = true;
+            this.bookingButton.Click += new System.EventHandler(this.bookingButton_Click);
+            // 
+            // roomsButton
+            // 
+            this.roomsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roomsButton.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomsButton.ForeColor = System.Drawing.Color.PaleGoldenrod;
+            this.roomsButton.Image = global::RioHotel.Properties.Resources.BG;
+            this.roomsButton.Location = new System.Drawing.Point(71, 82);
+            this.roomsButton.Name = "roomsButton";
+            this.roomsButton.Size = new System.Drawing.Size(182, 52);
+            this.roomsButton.TabIndex = 1;
+            this.roomsButton.Text = "Rooms";
+            this.roomsButton.UseVisualStyleBackColor = true;
+            this.roomsButton.Click += new System.EventHandler(this.roomsButton_Click);
+            // 
+            // dashboardButton
+            // 
+            this.dashboardButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dashboardButton.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboardButton.ForeColor = System.Drawing.Color.PaleGoldenrod;
+            this.dashboardButton.Image = global::RioHotel.Properties.Resources.BG;
+            this.dashboardButton.Location = new System.Drawing.Point(71, 18);
+            this.dashboardButton.Name = "dashboardButton";
+            this.dashboardButton.Size = new System.Drawing.Size(182, 52);
+            this.dashboardButton.TabIndex = 0;
+            this.dashboardButton.Text = "Dashboard";
+            this.dashboardButton.UseVisualStyleBackColor = true;
+            this.dashboardButton.Click += new System.EventHandler(this.dashboardButton_Click);
             // 
             // timer1
             // 
@@ -207,9 +384,17 @@
             this.Load += new System.EventHandler(this.Home_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -229,5 +414,18 @@
         private System.Windows.Forms.Label datetimeLabel;
         private System.Windows.Forms.Label usernamelabel;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button dashboardButton;
+        private System.Windows.Forms.Button guestsbutton;
+        private System.Windows.Forms.Button bookingButton;
+        private System.Windows.Forms.Button roomsButton;
+        private System.Windows.Forms.Panel movePanel;
+        private System.Windows.Forms.Button logoutButton;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox8;
     }
 }
