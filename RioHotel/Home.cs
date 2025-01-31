@@ -106,10 +106,29 @@ namespace RioHotel
         private void logoutButton_Click(object sender, EventArgs e)
         {
             MovePanel(logoutButton);
-            DialogResult result = MessageBox.Show("do you want to Log out?", "logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Do you want to log out?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
             if (DialogResult.Yes == result)
             {
-                timer1.Stop();
+                timer1.Stop(); // Stop the timer
+
+                // Find the login form if it's already open
+                Form loginForm = Application.OpenForms["Login"];
+
+                if (loginForm != null)
+                {
+                    // Clear fields before showing the login form
+                    ((Login)loginForm).ClearFields();
+                    loginForm.Show();
+                }
+                else
+                {
+                    // If not found, create a new instance
+                    Login newLoginForm = new Login();
+                    newLoginForm.Show();
+                }
+
+                // Close the Home form
                 this.Close();
             }
         }

@@ -16,6 +16,13 @@ namespace RioHotel
         {
             InitializeComponent();
         }
+
+        private void MovePanel(Control btn)
+        {
+            movePanel.Top = btn.Top;
+            movePanel.Height = btn.Height;
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -60,10 +67,28 @@ namespace RioHotel
 
         private void logoutButton_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("do you want to Log out?", "logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (DialogResult.Yes == result)
+            MovePanel(logoutButton);
+            DialogResult result = MessageBox.Show("Do you want to log out?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
             {
-                //timer1.Stop();
+                // Find the login form if it's already open
+                Form loginForm = Application.OpenForms["Login"];
+
+                if (loginForm != null)
+                {
+                    // Reset textboxes before showing login form
+                    ((Login)loginForm).ClearFields();
+                    loginForm.Show();
+                }
+                else
+                {
+                    // If not found, create a new instance
+                    Login newLoginForm = new Login();
+                    newLoginForm.Show();
+                }
+
+                // Close the current admin form
                 this.Close();
             }
         }

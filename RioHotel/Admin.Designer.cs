@@ -39,8 +39,12 @@
             this.minimizeButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.usersButton = new System.Windows.Forms.Button();
-            this.aC_Users1 = new RioHotel.Admin_Control.AC_Users();
             this.logoutButton = new System.Windows.Forms.Button();
+            this.aC_Users1 = new RioHotel.Admin_Control.AC_Users();
+            this.guestsbutton = new System.Windows.Forms.Button();
+            this.bookingButton = new System.Windows.Forms.Button();
+            this.roomsButton = new System.Windows.Forms.Button();
+            this.movePanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -153,6 +157,10 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.BackColor = System.Drawing.Color.CadetBlue;
+            this.panel2.Controls.Add(this.movePanel);
+            this.panel2.Controls.Add(this.guestsbutton);
+            this.panel2.Controls.Add(this.bookingButton);
+            this.panel2.Controls.Add(this.roomsButton);
             this.panel2.Controls.Add(this.logoutButton);
             this.panel2.Controls.Add(this.usersButton);
             this.panel2.Location = new System.Drawing.Point(-2, 142);
@@ -167,12 +175,26 @@
             this.usersButton.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usersButton.ForeColor = System.Drawing.Color.PaleGoldenrod;
             this.usersButton.Image = global::RioHotel.Properties.Resources.BG;
-            this.usersButton.Location = new System.Drawing.Point(75, 15);
+            this.usersButton.Location = new System.Drawing.Point(65, 15);
             this.usersButton.Name = "usersButton";
-            this.usersButton.Size = new System.Drawing.Size(182, 60);
+            this.usersButton.Size = new System.Drawing.Size(182, 54);
             this.usersButton.TabIndex = 17;
             this.usersButton.Text = "Users\r\n";
             this.usersButton.UseVisualStyleBackColor = true;
+            // 
+            // logoutButton
+            // 
+            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.logoutButton.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutButton.ForeColor = System.Drawing.Color.PaleGoldenrod;
+            this.logoutButton.Image = global::RioHotel.Properties.Resources.BG;
+            this.logoutButton.Location = new System.Drawing.Point(65, 334);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(182, 60);
+            this.logoutButton.TabIndex = 18;
+            this.logoutButton.Text = "Log Out";
+            this.logoutButton.UseVisualStyleBackColor = true;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // aC_Users1
             // 
@@ -185,19 +207,55 @@
             this.aC_Users1.Size = new System.Drawing.Size(803, 511);
             this.aC_Users1.TabIndex = 17;
             // 
-            // logoutButton
+            // guestsbutton
             // 
-            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.logoutButton.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutButton.ForeColor = System.Drawing.Color.PaleGoldenrod;
-            this.logoutButton.Image = global::RioHotel.Properties.Resources.BG;
-            this.logoutButton.Location = new System.Drawing.Point(75, 334);
-            this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(182, 60);
-            this.logoutButton.TabIndex = 18;
-            this.logoutButton.Text = "Log Out";
-            this.logoutButton.UseVisualStyleBackColor = true;
-            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
+            this.guestsbutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guestsbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.guestsbutton.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guestsbutton.ForeColor = System.Drawing.Color.PaleGoldenrod;
+            this.guestsbutton.Image = global::RioHotel.Properties.Resources.BG;
+            this.guestsbutton.Location = new System.Drawing.Point(65, 218);
+            this.guestsbutton.Name = "guestsbutton";
+            this.guestsbutton.Size = new System.Drawing.Size(182, 52);
+            this.guestsbutton.TabIndex = 21;
+            this.guestsbutton.Text = "Guests";
+            this.guestsbutton.UseVisualStyleBackColor = true;
+            // 
+            // bookingButton
+            // 
+            this.bookingButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bookingButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bookingButton.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookingButton.ForeColor = System.Drawing.Color.PaleGoldenrod;
+            this.bookingButton.Image = global::RioHotel.Properties.Resources.BG;
+            this.bookingButton.Location = new System.Drawing.Point(65, 152);
+            this.bookingButton.Name = "bookingButton";
+            this.bookingButton.Size = new System.Drawing.Size(182, 52);
+            this.bookingButton.TabIndex = 20;
+            this.bookingButton.Text = "Booking";
+            this.bookingButton.UseVisualStyleBackColor = true;
+            // 
+            // roomsButton
+            // 
+            this.roomsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roomsButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.roomsButton.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomsButton.ForeColor = System.Drawing.Color.PaleGoldenrod;
+            this.roomsButton.Image = global::RioHotel.Properties.Resources.BG;
+            this.roomsButton.Location = new System.Drawing.Point(65, 85);
+            this.roomsButton.Name = "roomsButton";
+            this.roomsButton.Size = new System.Drawing.Size(182, 52);
+            this.roomsButton.TabIndex = 19;
+            this.roomsButton.Text = "Rooms";
+            this.roomsButton.UseVisualStyleBackColor = true;
+            // 
+            // movePanel
+            // 
+            this.movePanel.BackgroundImage = global::RioHotel.Properties.Resources.BG;
+            this.movePanel.Location = new System.Drawing.Point(251, 13);
+            this.movePanel.Name = "movePanel";
+            this.movePanel.Size = new System.Drawing.Size(14, 58);
+            this.movePanel.TabIndex = 22;
             // 
             // Admin
             // 
@@ -238,5 +296,9 @@
         private System.Windows.Forms.Button usersButton;
         private Admin_Control.AC_Users aC_Users1;
         private System.Windows.Forms.Button logoutButton;
+        private System.Windows.Forms.Button guestsbutton;
+        private System.Windows.Forms.Button bookingButton;
+        private System.Windows.Forms.Button roomsButton;
+        private System.Windows.Forms.Panel movePanel;
     }
 }

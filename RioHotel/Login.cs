@@ -61,8 +61,6 @@ namespace RioHotel
                                 this.Hide(); // Hide login form
                                 Home homePage = new Home();
                                 homePage.Username = usernameTextBox.Text;
-                                usernameTextBox.Clear();
-                                passTextBox.Clear();
                                 homePage.ShowDialog(); // Keep login form alive in the background
                                 this.Show(); // Show login form again after Home is closed
                                 return;
@@ -140,5 +138,18 @@ namespace RioHotel
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            usernameTextBox.Text = "";
+            passTextBox.Text = "";
+        }
+
+        public void ClearFields()
+        {
+            usernameTextBox.Text = "";
+            passTextBox.Text = "";
+        }
+
     }
 }

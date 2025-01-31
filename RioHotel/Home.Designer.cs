@@ -110,7 +110,7 @@
             // 
             this.usernamelabel.AutoSize = true;
             this.usernamelabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernamelabel.Location = new System.Drawing.Point(319, 73);
+            this.usernamelabel.Location = new System.Drawing.Point(318, 72);
             this.usernamelabel.Name = "usernamelabel";
             this.usernamelabel.Size = new System.Drawing.Size(24, 26);
             this.usernamelabel.TabIndex = 8;
@@ -243,7 +243,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::RioHotel.Properties.Resources.log_out;
-            this.pictureBox7.Location = new System.Drawing.Point(28, 287);
+            this.pictureBox7.Location = new System.Drawing.Point(28, 286);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(33, 34);
             this.pictureBox7.TabIndex = 9;
@@ -252,7 +252,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::RioHotel.Properties.Resources.guest;
-            this.pictureBox6.Location = new System.Drawing.Point(28, 224);
+            this.pictureBox6.Location = new System.Drawing.Point(28, 223);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(33, 34);
             this.pictureBox6.TabIndex = 8;
@@ -261,7 +261,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::RioHotel.Properties.Resources.booking;
-            this.pictureBox4.Location = new System.Drawing.Point(28, 158);
+            this.pictureBox4.Location = new System.Drawing.Point(28, 157);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(33, 34);
             this.pictureBox4.TabIndex = 7;
@@ -270,7 +270,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::RioHotel.Properties.Resources.rooms;
-            this.pictureBox3.Location = new System.Drawing.Point(26, 91);
+            this.pictureBox3.Location = new System.Drawing.Point(26, 90);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(33, 34);
             this.pictureBox3.TabIndex = 6;
@@ -279,7 +279,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::RioHotel.Properties.Resources.dashboard2;
-            this.pictureBox2.Location = new System.Drawing.Point(26, 29);
+            this.pictureBox2.Location = new System.Drawing.Point(26, 28);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(33, 34);
             this.pictureBox2.TabIndex = 5;
@@ -288,6 +288,7 @@
             // logoutButton
             // 
             this.logoutButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.logoutButton.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutButton.ForeColor = System.Drawing.Color.PaleGoldenrod;
             this.logoutButton.Image = global::RioHotel.Properties.Resources.BG;
@@ -311,6 +312,7 @@
             // guestsbutton
             // 
             this.guestsbutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guestsbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.guestsbutton.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guestsbutton.ForeColor = System.Drawing.Color.PaleGoldenrod;
             this.guestsbutton.Image = global::RioHotel.Properties.Resources.BG;
@@ -325,6 +327,7 @@
             // bookingButton
             // 
             this.bookingButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bookingButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bookingButton.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bookingButton.ForeColor = System.Drawing.Color.PaleGoldenrod;
             this.bookingButton.Image = global::RioHotel.Properties.Resources.BG;
@@ -339,6 +342,7 @@
             // roomsButton
             // 
             this.roomsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roomsButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.roomsButton.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roomsButton.ForeColor = System.Drawing.Color.PaleGoldenrod;
             this.roomsButton.Image = global::RioHotel.Properties.Resources.BG;
@@ -353,6 +357,7 @@
             // dashboardButton
             // 
             this.dashboardButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dashboardButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.dashboardButton.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dashboardButton.ForeColor = System.Drawing.Color.PaleGoldenrod;
             this.dashboardButton.Image = global::RioHotel.Properties.Resources.BG;
