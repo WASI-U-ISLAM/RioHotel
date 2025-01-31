@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin Control\AC_Rooms.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Control\AC_Rooms.Designer.cs">
+      <DependentUpon>AC_Rooms.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin Control\AC_Users.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -58,6 +64,13 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="All Users Control\UC_Rooms.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="All Users Control\UC_Rooms.Designer.cs">
+      <DependentUpon>UC_Rooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="function.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,11 +91,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin Control\AC_Rooms.resx">
+      <DependentUpon>AC_Rooms.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin Control\AC_Users.resx">
       <DependentUpon>AC_Users.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="All Users Control\UC_Rooms.resx">
+      <DependentUpon>UC_Rooms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

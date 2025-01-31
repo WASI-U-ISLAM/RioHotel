@@ -92,5 +92,30 @@ namespace RioHotel
                 this.Close();
             }
         }
+
+        private void Admin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aC_Rooms1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aC_Users1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usersButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roomsButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
