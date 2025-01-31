@@ -95,7 +95,9 @@ namespace RioHotel
 
         private void Admin_Load(object sender, EventArgs e)
         {
-
+            // Hide both controls on load
+            aC_Users1.Visible = false;
+            aC_Rooms1.Visible = false;
         }
 
         private void aC_Rooms1_Load(object sender, EventArgs e)
@@ -110,12 +112,30 @@ namespace RioHotel
 
         private void usersButton_Click(object sender, EventArgs e)
         {
-
+            MovePanel(usersButton);
+            aC_Users1.Visible = true;
+            aC_Rooms1.Visible = false;
         }
 
         private void roomsButton_Click(object sender, EventArgs e)
         {
+            MovePanel(roomsButton);
+            aC_Users1.Visible = false;
+            aC_Rooms1.Visible = true;
+        }
 
+        private void bookingButton_Click(object sender, EventArgs e)
+        {
+            MovePanel(bookingButton);
+            aC_Users1.Visible = false;
+            aC_Rooms1.Visible = false;
+        }
+
+        private void guestsbutton_Click(object sender, EventArgs e)
+        {
+            MovePanel(guestsbutton);
+            aC_Users1.Visible = false;
+            aC_Rooms1.Visible = false;
         }
     }
 }

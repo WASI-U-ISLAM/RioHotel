@@ -56,7 +56,6 @@
             this.userinfoLabel.Size = new System.Drawing.Size(293, 31);
             this.userinfoLabel.TabIndex = 0;
             this.userinfoLabel.Text = "USER INFORMATION";
-            //this.userinfoLabel.Click += new System.EventHandler(this.userinfoLabel_Click);
             // 
             // dataGridView1
             // 
@@ -65,7 +64,7 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Cornsilk;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
@@ -85,7 +84,6 @@
             this.idLabel.Size = new System.Drawing.Size(44, 24);
             this.idLabel.TabIndex = 2;
             this.idLabel.Text = "ID :";
-            //this.idLabel.Click += new System.EventHandler(this.idLabel_Click);
             // 
             // usernameLabel
             // 
@@ -97,7 +95,6 @@
             this.usernameLabel.Size = new System.Drawing.Size(112, 24);
             this.usernameLabel.TabIndex = 3;
             this.usernameLabel.Text = "Username :";
-            //this.usernameLabel.Click += new System.EventHandler(this.usernameLabel_Click);
             // 
             // passLabel
             // 
@@ -109,7 +106,6 @@
             this.passLabel.Size = new System.Drawing.Size(108, 24);
             this.passLabel.TabIndex = 4;
             this.passLabel.Text = "Password :";
-            //this.passLabel.Click += new System.EventHandler(this.passLabel_Click);
             // 
             // emailLabel
             // 
@@ -121,7 +117,6 @@
             this.emailLabel.Size = new System.Drawing.Size(74, 24);
             this.emailLabel.TabIndex = 5;
             this.emailLabel.Text = "Email :";
-            //this.emailLabel.Click += new System.EventHandler(this.emailLabel_Click);
             // 
             // phoneLabel
             // 
@@ -133,7 +128,6 @@
             this.phoneLabel.Size = new System.Drawing.Size(79, 24);
             this.phoneLabel.TabIndex = 6;
             this.phoneLabel.Text = "Phone :";
-            //this.phoneLabel.Click += new System.EventHandler(this.phoneLabel_Click);
             // 
             // idtextBox
             // 
@@ -143,7 +137,6 @@
             this.idtextBox.Name = "idtextBox";
             this.idtextBox.Size = new System.Drawing.Size(58, 32);
             this.idtextBox.TabIndex = 7;
-            //this.idtextBox.TextChanged += new System.EventHandler(this.idtextBox_TextChanged);
             // 
             // usernameTextBox
             // 
@@ -153,7 +146,6 @@
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(179, 32);
             this.usernameTextBox.TabIndex = 8;
-            //this.usernameTextBox.TextChanged += new System.EventHandler(this.usernameTextBox_TextChanged);
             // 
             // passTextBox
             // 
@@ -163,7 +155,6 @@
             this.passTextBox.Name = "passTextBox";
             this.passTextBox.Size = new System.Drawing.Size(179, 32);
             this.passTextBox.TabIndex = 9;
-            //this.passTextBox.TextChanged += new System.EventHandler(this.passTextBox_TextChanged);
             // 
             // emailTextBox
             // 
@@ -173,7 +164,6 @@
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(179, 32);
             this.emailTextBox.TabIndex = 10;
-            //this.emailTextBox.TextChanged += new System.EventHandler(this.emailTextBox_TextChanged);
             // 
             // phoneTextBox
             // 
@@ -183,7 +173,6 @@
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Size = new System.Drawing.Size(178, 32);
             this.phoneTextBox.TabIndex = 11;
-            //this.phoneTextBox.TextChanged += new System.EventHandler(this.phoneTextBox_TextChanged);
             // 
             // addButton
             // 

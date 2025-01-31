@@ -379,6 +379,7 @@
             this.auC_Rooms1.Name = "auC_Rooms1";
             this.auC_Rooms1.Size = new System.Drawing.Size(803, 472);
             this.auC_Rooms1.TabIndex = 2;
+            this.auC_Rooms1.Load += new System.EventHandler(this.auC_Rooms1_Load);
             // 
             // Home
             // 
