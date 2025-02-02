@@ -150,36 +150,37 @@ namespace RioHotel.All_Users_Control
                 roomtypeComboBox.SelectedItem == null ||
                 bedComboBox.SelectedItem == null ||
                 roomnoComboBox.SelectedItem == null ||
-                roomidComboBox.SelectedItem == null || // Ensure roomid is selected
+                roomidComboBox.SelectedItem == null ||
                 priceComboBox.SelectedItem == null ||
                 discountComboBox.SelectedItem == null ||
-                string.IsNullOrWhiteSpace(advancepaidTextBox.Text))
+                string.IsNullOrWhiteSpace(advancepaidTextBox.Text) ||
+                finalpriceComboBox.SelectedItem == null)
             {
                 MessageBox.Show("Please fill in all required fields.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             // Retrieve values from form controls
-            string cname = nameTextBox.Text;
-            string nationality = nationalityTextBox.Text;
+            string cname = nameTextBox.Text.Trim();
+            string nationality = nationalityTextBox.Text.Trim();
             string dob = dobDateTimePicker.Value.ToString("yyyy-MM-dd");
-            string phoneNum = phnnumberTextBox.Text;
-            string nid = nidTextBox.Text;
-            string address = addressTextBox.Text;
+            string phoneNum = phnnumberTextBox.Text.Trim();
+            string nid = nidTextBox.Text.Trim();
+            string address = addressTextBox.Text.Trim();
             string gender = genderComboBox.SelectedItem.ToString();
             string roomid = roomidComboBox.SelectedItem.ToString();
             string roomNo = roomnoComboBox.SelectedItem.ToString();
             string checkin = checkinDateTimePicker.Value.ToString("yyyy-MM-dd");
             string discount = discountComboBox.SelectedItem.ToString().Replace("%", "");
-            string advancePaid = advancepaidTextBox.Text;
+            string advancePaid = advancepaidTextBox.Text.Trim();
             string finalPrice = finalpriceComboBox.SelectedItem.ToString();
+            string price = priceComboBox.SelectedItem.ToString();
 
             try
             {
                 // Insert into customers table
-                query = $@"
-                    INSERT INTO Mcustomers (cname, nationality, dob, phoneNum, nid, address, gender, roomid, roomNo, checkin, discount, advancePaid, finalPrice) 
-                    VALUES ('{cname}', '{nationality}', '{dob}', '{phoneNum}', '{nid}', '{address}', '{gender}', '{roomid}', '{roomNo}', '{checkin}', '{discount}', '{advancePaid}', '{finalPrice}')";
+                query = $@"INSERT INTO customers (cname, nationality, dob, phoneNum, nid, address, gender, roomid, roomNo, checkin, discount, advancePaid, finalPrice, price) 
+                    VALUES ('{cname}', '{nationality}', '{dob}', '{phoneNum}', '{nid}', '{address}', '{gender}', '{roomid}', '{roomNo}', '{checkin}', '{discount}', '{advancePaid}', '{finalPrice}', '{price}')";
                 fn.setData(query, "Customer details added successfully!");
 
                 // Mark room as booked
