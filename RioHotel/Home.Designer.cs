@@ -45,9 +45,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.sidePnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AdminPicBox)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -67,7 +69,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(206, 9);
+            this.label2.Location = new System.Drawing.Point(711, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 25);
             this.label2.TabIndex = 4;
@@ -100,7 +102,6 @@
             this.label1.Size = new System.Drawing.Size(125, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Admin Panel";
-           // this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // sidePnl
             // 
@@ -287,11 +288,21 @@
             // panel3
             // 
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel3.Controls.Add(this.button9);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(200, 45);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(784, 416);
             this.panel3.TabIndex = 2;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(194, 47);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.TabIndex = 0;
+            this.button9.Text = "button9";
+            this.button9.UseVisualStyleBackColor = true;
             // 
             // Home
             // 
@@ -306,11 +317,11 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Home";
             this.Text = "Home";
-            //this.Load += new System.EventHandler(this.Home_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.sidePnl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.AdminPicBox)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -333,5 +344,6 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button9;
     }
 }
