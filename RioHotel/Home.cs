@@ -77,6 +77,7 @@ namespace RioHotel
             auC_Rooms1.Visible = false;
             timer1.Start();
             usernamelabel.Text = Username;
+            uC_Booking1.Visible = false;
         }
 
         private void movePanel_Paint(object sender, PaintEventArgs e)
@@ -88,28 +89,33 @@ namespace RioHotel
         {
             MovePanel(dashboardButton);
             auC_Rooms1.Visible = false;
+            uC_Booking1.Visible = false;
         }
 
         private void roomsButton_Click(object sender, EventArgs e)
         {
             MovePanel(roomsButton);
             auC_Rooms1.Visible = true;
+            uC_Booking1.Visible = false;
         }
 
         private void bookingButton_Click(object sender, EventArgs e)
         {
             MovePanel(bookingButton);
             auC_Rooms1.Visible = false;
+            uC_Booking1.Visible = true;
         }
 
         private void guestsbutton_Click(object sender, EventArgs e)
         {
             MovePanel(guestsbutton);
             auC_Rooms1.Visible = false;
+            uC_Booking1.Visible = false;
         }
 
         private void logoutButton_Click(object sender, EventArgs e)
         {
+            uC_Booking1.Visible = false;
             auC_Rooms1.Visible = false;
             MovePanel(logoutButton);
             DialogResult result = MessageBox.Show("Do you want to log out?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -145,6 +151,11 @@ namespace RioHotel
         }
 
         private void auC_Rooms1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uC_Booking1_Load(object sender, EventArgs e)
         {
 
         }

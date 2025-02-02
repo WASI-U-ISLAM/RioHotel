@@ -55,7 +55,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(648, 218);
             this.dataGridView1.TabIndex = 0;
-            //this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // addroomLabel
             // 
@@ -116,7 +116,6 @@
             this.bookedLabel.Size = new System.Drawing.Size(86, 23);
             this.bookedLabel.TabIndex = 6;
             this.bookedLabel.Text = "Booked :";
-            //this.bookedLabel.Click += new System.EventHandler(this.bookedLabel_Click);
             // 
             // addroomButton
             // 
@@ -135,12 +134,12 @@
             // roomnoTextBox
             // 
             this.roomnoTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.roomnoTextBox.BackColor = System.Drawing.Color.White;
             this.roomnoTextBox.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roomnoTextBox.Location = new System.Drawing.Point(157, 313);
             this.roomnoTextBox.Name = "roomnoTextBox";
             this.roomnoTextBox.Size = new System.Drawing.Size(107, 32);
             this.roomnoTextBox.TabIndex = 14;
-            //this.roomnoTextBox.TextChanged += new System.EventHandler(this.roomnoTextBox_TextChanged);
             // 
             // roomtypeComboBox
             // 
@@ -184,7 +183,6 @@
             this.priceComboBox.Name = "priceComboBox";
             this.priceComboBox.Size = new System.Drawing.Size(107, 31);
             this.priceComboBox.TabIndex = 31;
-            //this.priceComboBox.SelectedIndexChanged += new System.EventHandler(this.priceComboBox_SelectedIndexChanged);
             // 
             // bookedComboBox
             // 
@@ -197,7 +195,6 @@
             this.bookedComboBox.Name = "bookedComboBox";
             this.bookedComboBox.Size = new System.Drawing.Size(107, 31);
             this.bookedComboBox.TabIndex = 32;
-            //this.bookedComboBox.SelectedIndexChanged += new System.EventHandler(this.bookedComboBox_SelectedIndexChanged);
             // 
             // AUC_Rooms
             // 

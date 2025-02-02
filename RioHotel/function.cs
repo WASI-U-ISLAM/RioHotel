@@ -11,36 +11,42 @@ namespace RioHotel
 {
     class function
     {
-        protected SqlConnection getConnection()
+        private string connectionString = "Data Source=WASI-LENOVO\\SQLEXPRESS;Initial Catalog=\"RIO HOTEL\";Persist Security Info=True;User ID=sa;Password=w4a4s4i4;Encrypt=True;TrustServerCertificate=True";
+
+        public SqlConnection getConnection()
         {
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = "Data Source = WASI-LENOVO\\SQLEXPRESS;Initial Catalog=\"RIO HOTEL\";Persist Security Info=True;User ID=sa;Password=w4a4s4i4;Encrypt=True;TrustServerCertificate=True ";
-            return con;
+            return new SqlConnection(connectionString);
         }
 
-        public DataSet getData(String query) // Get Data from databsae
+        public DataSet getData(string query)
         {
-            SqlConnection conn = getConnection();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = conn;
-            cmd.CommandText = query;
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            return ds;
+            using (SqlConnection conn = getConnection())
+            {
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds;
+            }
         }
 
-        public void setData(String query,String message) // Insertion Deletion Upadation 
+        public void setData(string query, string message)
+        {
+            using (SqlConnection con = getConnection())
+            {
+                SqlCommand cmd = new SqlCommand(query, con);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("'" + message + "'", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        public SqlDataReader getforCombo(string query)
         {
             SqlConnection con = getConnection();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
             con.Open();
-            cmd.CommandText = query;
-            cmd.ExecuteNonQuery();
-            con.Close();
-
-            MessageBox.Show("'" + message + "'","Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            SqlCommand cmd = new SqlCommand(query, con);
+            return cmd.ExecuteReader();  // Caller must close the reader
         }
     }
 }

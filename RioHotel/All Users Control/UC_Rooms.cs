@@ -90,5 +90,10 @@ namespace RioHotel.All_Users_Control
 
             AUC_Rooms_Load(sender, e); // Refresh Grid
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin Control\AC_Booking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Control\AC_Booking.Designer.cs">
+      <DependentUpon>AC_Booking.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin Control\AC_Rooms.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -63,6 +69,12 @@
     </Compile>
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="All Users Control\UC_Booking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="All Users Control\UC_Booking.Designer.cs">
+      <DependentUpon>UC_Booking.cs</DependentUpon>
     </Compile>
     <Compile Include="All Users Control\UC_Rooms.cs">
       <SubType>UserControl</SubType>
@@ -91,6 +103,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin Control\AC_Booking.resx">
+      <DependentUpon>AC_Booking.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin Control\AC_Rooms.resx">
       <DependentUpon>AC_Rooms.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="All Users Control\UC_Booking.resx">
+      <DependentUpon>UC_Booking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="All Users Control\UC_Rooms.resx">
       <DependentUpon>UC_Rooms.cs</DependentUpon>
