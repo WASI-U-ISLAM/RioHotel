@@ -46,6 +46,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.sidePnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AdminPicBox)).BeginInit();
@@ -288,6 +289,7 @@
             // panel3
             // 
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel3.Controls.Add(this.radioButton1);
             this.panel3.Controls.Add(this.button9);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(200, 45);
@@ -303,6 +305,17 @@
             this.button9.TabIndex = 0;
             this.button9.Text = "button9";
             this.button9.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(301, 152);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(150, 29);
+            this.radioButton1.TabIndex = 1;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // Home
             // 
@@ -322,6 +335,7 @@
             this.sidePnl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.AdminPicBox)).EndInit();
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -345,5 +359,6 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
