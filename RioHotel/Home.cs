@@ -13,11 +13,29 @@ namespace RioHotel
 {
     public partial class Home : Form
     {
+        private Timer timer;
+        private object labeltime;
+
         public Home()
         {
             InitializeComponent();
+            InitializeClock();
+        }
+
+        private void InitializeClock()
+        {
+            timer = new Timer();
+            timer.Interval = 1000; 
+            timer.Tick += Timer_Tick;
+            timer.Start();
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            label2.Text = DateTime.Now.ToString("dddd, MMMM dd yyyy HH:mm");
 
         }
+
 
         private void button7_Click(object sender, EventArgs e)
         {
@@ -49,5 +67,10 @@ namespace RioHotel
             lp.ShowDialog();
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+            
+
+        }
     }
 }
