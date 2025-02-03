@@ -57,6 +57,8 @@
             this.dashboardButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.cusinfoPanel = new System.Windows.Forms.Panel();
+            this.checkoutComboBox = new System.Windows.Forms.ComboBox();
+            this.checkedlabel = new System.Windows.Forms.Label();
             this.fullpricepaidTextBox = new System.Windows.Forms.TextBox();
             this.cusidTextBox = new System.Windows.Forms.TextBox();
             this.fullpricepaidLabel = new System.Windows.Forms.Label();
@@ -102,8 +104,6 @@
             this.cusinfoDataGridView = new System.Windows.Forms.DataGridView();
             this.uC_Booking1 = new RioHotel.All_Users_Control.UC_Booking();
             this.auC_Rooms1 = new RioHotel.All_Users_Control.AUC_Rooms();
-            this.checkoutComboBox = new System.Windows.Forms.ComboBox();
-            this.checkedlabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -175,7 +175,6 @@
             this.datetimeLabel.Size = new System.Drawing.Size(24, 26);
             this.datetimeLabel.TabIndex = 1;
             this.datetimeLabel.Text = "?";
-            this.datetimeLabel.Click += new System.EventHandler(this.datetimeLabel_Click);
             // 
             // welcomeLabel
             // 
@@ -227,7 +226,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(138, 54);
             this.panel4.TabIndex = 5;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // maximizeButton
             // 
@@ -354,7 +352,6 @@
             this.movePanel.Name = "movePanel";
             this.movePanel.Size = new System.Drawing.Size(10, 55);
             this.movePanel.TabIndex = 2;
-            this.movePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.movePanel_Paint);
             // 
             // guestsbutton
             // 
@@ -476,7 +473,25 @@
             this.cusinfoPanel.Name = "cusinfoPanel";
             this.cusinfoPanel.Size = new System.Drawing.Size(805, 472);
             this.cusinfoPanel.TabIndex = 4;
-            this.cusinfoPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.cusinfoPanel_Paint);
+            // 
+            // checkoutComboBox
+            // 
+            this.checkoutComboBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkoutComboBox.FormattingEnabled = true;
+            this.checkoutComboBox.Location = new System.Drawing.Point(792, 376);
+            this.checkoutComboBox.Name = "checkoutComboBox";
+            this.checkoutComboBox.Size = new System.Drawing.Size(121, 30);
+            this.checkoutComboBox.TabIndex = 85;
+            // 
+            // checkedlabel
+            // 
+            this.checkedlabel.AutoSize = true;
+            this.checkedlabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedlabel.Location = new System.Drawing.Point(789, 339);
+            this.checkedlabel.Name = "checkedlabel";
+            this.checkedlabel.Size = new System.Drawing.Size(92, 22);
+            this.checkedlabel.TabIndex = 84;
+            this.checkedlabel.Text = "Checked :";
             // 
             // fullpricepaidTextBox
             // 
@@ -493,7 +508,6 @@
             this.cusidTextBox.Name = "cusidTextBox";
             this.cusidTextBox.Size = new System.Drawing.Size(145, 29);
             this.cusidTextBox.TabIndex = 82;
-            this.cusidTextBox.TextChanged += new System.EventHandler(this.cusidTextBox_TextChanged);
             // 
             // fullpricepaidLabel
             // 
@@ -523,7 +537,6 @@
             this.checkoutDateTimePicker.Name = "checkoutDateTimePicker";
             this.checkoutDateTimePicker.Size = new System.Drawing.Size(200, 29);
             this.checkoutDateTimePicker.TabIndex = 77;
-            this.checkoutDateTimePicker.ValueChanged += new System.EventHandler(this.checkoutDateTimePicker_ValueChanged);
             // 
             // label2
             // 
@@ -569,7 +582,6 @@
             this.roomidComboBox.Name = "roomidComboBox";
             this.roomidComboBox.Size = new System.Drawing.Size(80, 30);
             this.roomidComboBox.TabIndex = 73;
-            this.roomidComboBox.SelectedIndexChanged += new System.EventHandler(this.roomidComboBox_SelectedIndexChanged);
             // 
             // roomidLabel
             // 
@@ -589,7 +601,6 @@
             this.priceComboBox.Name = "priceComboBox";
             this.priceComboBox.Size = new System.Drawing.Size(121, 30);
             this.priceComboBox.TabIndex = 71;
-            this.priceComboBox.SelectedIndexChanged += new System.EventHandler(this.priceComboBox_SelectedIndexChanged);
             // 
             // roomnoComboBox
             // 
@@ -599,7 +610,6 @@
             this.roomnoComboBox.Name = "roomnoComboBox";
             this.roomnoComboBox.Size = new System.Drawing.Size(121, 30);
             this.roomnoComboBox.TabIndex = 70;
-            this.roomnoComboBox.SelectedIndexChanged += new System.EventHandler(this.roomnoComboBox_SelectedIndexChanged);
             // 
             // nidTextBox
             // 
@@ -608,7 +618,6 @@
             this.nidTextBox.Name = "nidTextBox";
             this.nidTextBox.Size = new System.Drawing.Size(119, 29);
             this.nidTextBox.TabIndex = 69;
-            this.nidTextBox.TextChanged += new System.EventHandler(this.nidTextBox_TextChanged);
             // 
             // finalpriceComboBox
             // 
@@ -618,7 +627,6 @@
             this.finalpriceComboBox.Name = "finalpriceComboBox";
             this.finalpriceComboBox.Size = new System.Drawing.Size(121, 30);
             this.finalpriceComboBox.TabIndex = 68;
-            this.finalpriceComboBox.SelectedIndexChanged += new System.EventHandler(this.finalpriceComboBox_SelectedIndexChanged);
             // 
             // bedComboBox
             // 
@@ -628,7 +636,6 @@
             this.bedComboBox.Name = "bedComboBox";
             this.bedComboBox.Size = new System.Drawing.Size(121, 30);
             this.bedComboBox.TabIndex = 67;
-            this.bedComboBox.SelectedIndexChanged += new System.EventHandler(this.bedComboBox_SelectedIndexChanged);
             // 
             // discountComboBox
             // 
@@ -642,7 +649,6 @@
             this.discountComboBox.Name = "discountComboBox";
             this.discountComboBox.Size = new System.Drawing.Size(92, 30);
             this.discountComboBox.TabIndex = 66;
-            this.discountComboBox.SelectedIndexChanged += new System.EventHandler(this.discountComboBox_SelectedIndexChanged);
             // 
             // advancepaidTextBox
             // 
@@ -651,7 +657,6 @@
             this.advancepaidTextBox.Name = "advancepaidTextBox";
             this.advancepaidTextBox.Size = new System.Drawing.Size(128, 29);
             this.advancepaidTextBox.TabIndex = 65;
-            this.advancepaidTextBox.TextChanged += new System.EventHandler(this.advancepaidTextBox_TextChanged);
             // 
             // checkinDateTimePicker
             // 
@@ -661,7 +666,6 @@
             this.checkinDateTimePicker.Name = "checkinDateTimePicker";
             this.checkinDateTimePicker.Size = new System.Drawing.Size(200, 29);
             this.checkinDateTimePicker.TabIndex = 64;
-            this.checkinDateTimePicker.ValueChanged += new System.EventHandler(this.checkinDateTimePicker_ValueChanged);
             // 
             // dobDateTimePicker
             // 
@@ -671,7 +675,6 @@
             this.dobDateTimePicker.Name = "dobDateTimePicker";
             this.dobDateTimePicker.Size = new System.Drawing.Size(200, 29);
             this.dobDateTimePicker.TabIndex = 63;
-            this.dobDateTimePicker.ValueChanged += new System.EventHandler(this.dobDateTimePicker_ValueChanged);
             // 
             // checkinLabel
             // 
@@ -693,7 +696,6 @@
             this.roomtypeComboBox.Name = "roomtypeComboBox";
             this.roomtypeComboBox.Size = new System.Drawing.Size(121, 30);
             this.roomtypeComboBox.TabIndex = 61;
-            this.roomtypeComboBox.SelectedIndexChanged += new System.EventHandler(this.roomtypeComboBox_SelectedIndexChanged);
             // 
             // genderComboBox
             // 
@@ -706,7 +708,6 @@
             this.genderComboBox.Name = "genderComboBox";
             this.genderComboBox.Size = new System.Drawing.Size(121, 30);
             this.genderComboBox.TabIndex = 60;
-            this.genderComboBox.SelectedIndexChanged += new System.EventHandler(this.genderComboBox_SelectedIndexChanged);
             // 
             // advancepaidLabel
             // 
@@ -725,7 +726,6 @@
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(145, 29);
             this.addressTextBox.TabIndex = 58;
-            this.addressTextBox.TextChanged += new System.EventHandler(this.addressTextBox_TextChanged);
             // 
             // phnnumberTextBox
             // 
@@ -734,7 +734,6 @@
             this.phnnumberTextBox.Name = "phnnumberTextBox";
             this.phnnumberTextBox.Size = new System.Drawing.Size(200, 29);
             this.phnnumberTextBox.TabIndex = 57;
-            this.phnnumberTextBox.TextChanged += new System.EventHandler(this.phnnumberTextBox_TextChanged);
             // 
             // nationalityTextBox
             // 
@@ -743,7 +742,6 @@
             this.nationalityTextBox.Name = "nationalityTextBox";
             this.nationalityTextBox.Size = new System.Drawing.Size(145, 29);
             this.nationalityTextBox.TabIndex = 56;
-            this.nationalityTextBox.TextChanged += new System.EventHandler(this.nationalityTextBox_TextChanged);
             // 
             // nameTextBox
             // 
@@ -752,7 +750,6 @@
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(145, 29);
             this.nameTextBox.TabIndex = 55;
-            this.nameTextBox.TextChanged += new System.EventHandler(this.nameTextBox_TextChanged);
             // 
             // finalpriceLabel
             // 
@@ -926,7 +923,6 @@
             this.uC_Booking1.Name = "uC_Booking1";
             this.uC_Booking1.Size = new System.Drawing.Size(803, 472);
             this.uC_Booking1.TabIndex = 3;
-            this.uC_Booking1.Load += new System.EventHandler(this.uC_Booking1_Load);
             // 
             // auC_Rooms1
             // 
@@ -935,27 +931,6 @@
             this.auC_Rooms1.Name = "auC_Rooms1";
             this.auC_Rooms1.Size = new System.Drawing.Size(803, 472);
             this.auC_Rooms1.TabIndex = 2;
-            this.auC_Rooms1.Load += new System.EventHandler(this.auC_Rooms1_Load);
-            // 
-            // checkoutComboBox
-            // 
-            this.checkoutComboBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkoutComboBox.FormattingEnabled = true;
-            this.checkoutComboBox.Location = new System.Drawing.Point(792, 376);
-            this.checkoutComboBox.Name = "checkoutComboBox";
-            this.checkoutComboBox.Size = new System.Drawing.Size(121, 30);
-            this.checkoutComboBox.TabIndex = 85;
-            this.checkoutComboBox.SelectedIndexChanged += new System.EventHandler(this.checkoutComboBox_SelectedIndexChanged);
-            // 
-            // checkedlabel
-            // 
-            this.checkedlabel.AutoSize = true;
-            this.checkedlabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedlabel.Location = new System.Drawing.Point(789, 339);
-            this.checkedlabel.Name = "checkedlabel";
-            this.checkedlabel.Size = new System.Drawing.Size(92, 22);
-            this.checkedlabel.TabIndex = 84;
-            this.checkedlabel.Text = "Checked :";
             // 
             // Home
             // 
