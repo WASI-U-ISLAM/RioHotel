@@ -241,5 +241,140 @@ namespace RioHotel.All_Users_Control
                 roomnoComboBox.SelectedIndex = roomidComboBox.SelectedIndex;
             }
         }
+
+        private void nameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void genderLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void genderComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nationalityLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nationalityTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dobLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dobDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void phnnumLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void phnnumberTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nidLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nidTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addressLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addressTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bedLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roomtypeLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roomLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roomnoComboBox_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkinLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkinDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void priceLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void priceComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void discountLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void discountComboBox_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void advancepaidLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void finalpriceLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void finalpriceComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

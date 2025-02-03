@@ -56,6 +56,50 @@
             this.roomsButton = new System.Windows.Forms.Button();
             this.dashboardButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.cusinfoPanel = new System.Windows.Forms.Panel();
+            this.fullpricepaidTextBox = new System.Windows.Forms.TextBox();
+            this.cusidTextBox = new System.Windows.Forms.TextBox();
+            this.fullpricepaidLabel = new System.Windows.Forms.Label();
+            this.cusidLabel = new System.Windows.Forms.Label();
+            this.checkoutDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.checkoutButton = new System.Windows.Forms.Button();
+            this.updateButton = new System.Windows.Forms.Button();
+            this.roomidComboBox = new System.Windows.Forms.ComboBox();
+            this.roomidLabel = new System.Windows.Forms.Label();
+            this.priceComboBox = new System.Windows.Forms.ComboBox();
+            this.roomnoComboBox = new System.Windows.Forms.ComboBox();
+            this.nidTextBox = new System.Windows.Forms.TextBox();
+            this.finalpriceComboBox = new System.Windows.Forms.ComboBox();
+            this.bedComboBox = new System.Windows.Forms.ComboBox();
+            this.discountComboBox = new System.Windows.Forms.ComboBox();
+            this.advancepaidTextBox = new System.Windows.Forms.TextBox();
+            this.checkinDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.dobDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.checkinLabel = new System.Windows.Forms.Label();
+            this.roomtypeComboBox = new System.Windows.Forms.ComboBox();
+            this.genderComboBox = new System.Windows.Forms.ComboBox();
+            this.advancepaidLabel = new System.Windows.Forms.Label();
+            this.addressTextBox = new System.Windows.Forms.TextBox();
+            this.phnnumberTextBox = new System.Windows.Forms.TextBox();
+            this.nationalityTextBox = new System.Windows.Forms.TextBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.finalpriceLabel = new System.Windows.Forms.Label();
+            this.discountLabel = new System.Windows.Forms.Label();
+            this.priceLabel = new System.Windows.Forms.Label();
+            this.roomtypeLabel = new System.Windows.Forms.Label();
+            this.bedLabel = new System.Windows.Forms.Label();
+            this.roomLabel = new System.Windows.Forms.Label();
+            this.addressLabel = new System.Windows.Forms.Label();
+            this.nidLabel = new System.Windows.Forms.Label();
+            this.phnnumLabel = new System.Windows.Forms.Label();
+            this.dobLabel = new System.Windows.Forms.Label();
+            this.nationalityLabel = new System.Windows.Forms.Label();
+            this.genderLabel = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.searchButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cusinfoDataGridView = new System.Windows.Forms.DataGridView();
             this.uC_Booking1 = new RioHotel.All_Users_Control.UC_Booking();
             this.auC_Rooms1 = new RioHotel.All_Users_Control.AUC_Rooms();
             this.panel1.SuspendLayout();
@@ -70,6 +114,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.cusinfoPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cusinfoDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -117,7 +163,7 @@
             this.usernamelabel.Size = new System.Drawing.Size(24, 26);
             this.usernamelabel.TabIndex = 8;
             this.usernamelabel.Text = "?";
-            this.usernamelabel.Click += new System.EventHandler(this.usernamelabel_Click);
+            //this.usernamelabel.Click += new System.EventHandler(this.usernamelabel_Click);
             // 
             // datetimeLabel
             // 
@@ -373,6 +419,504 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // cusinfoPanel
+            // 
+            this.cusinfoPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cusinfoPanel.AutoScroll = true;
+            this.cusinfoPanel.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.cusinfoPanel.Controls.Add(this.fullpricepaidTextBox);
+            this.cusinfoPanel.Controls.Add(this.cusidTextBox);
+            this.cusinfoPanel.Controls.Add(this.fullpricepaidLabel);
+            this.cusinfoPanel.Controls.Add(this.cusidLabel);
+            this.cusinfoPanel.Controls.Add(this.checkoutDateTimePicker);
+            this.cusinfoPanel.Controls.Add(this.label2);
+            this.cusinfoPanel.Controls.Add(this.checkoutButton);
+            this.cusinfoPanel.Controls.Add(this.updateButton);
+            this.cusinfoPanel.Controls.Add(this.roomidComboBox);
+            this.cusinfoPanel.Controls.Add(this.roomidLabel);
+            this.cusinfoPanel.Controls.Add(this.priceComboBox);
+            this.cusinfoPanel.Controls.Add(this.roomnoComboBox);
+            this.cusinfoPanel.Controls.Add(this.nidTextBox);
+            this.cusinfoPanel.Controls.Add(this.finalpriceComboBox);
+            this.cusinfoPanel.Controls.Add(this.bedComboBox);
+            this.cusinfoPanel.Controls.Add(this.discountComboBox);
+            this.cusinfoPanel.Controls.Add(this.advancepaidTextBox);
+            this.cusinfoPanel.Controls.Add(this.checkinDateTimePicker);
+            this.cusinfoPanel.Controls.Add(this.dobDateTimePicker);
+            this.cusinfoPanel.Controls.Add(this.checkinLabel);
+            this.cusinfoPanel.Controls.Add(this.roomtypeComboBox);
+            this.cusinfoPanel.Controls.Add(this.genderComboBox);
+            this.cusinfoPanel.Controls.Add(this.advancepaidLabel);
+            this.cusinfoPanel.Controls.Add(this.addressTextBox);
+            this.cusinfoPanel.Controls.Add(this.phnnumberTextBox);
+            this.cusinfoPanel.Controls.Add(this.nationalityTextBox);
+            this.cusinfoPanel.Controls.Add(this.nameTextBox);
+            this.cusinfoPanel.Controls.Add(this.finalpriceLabel);
+            this.cusinfoPanel.Controls.Add(this.discountLabel);
+            this.cusinfoPanel.Controls.Add(this.priceLabel);
+            this.cusinfoPanel.Controls.Add(this.roomtypeLabel);
+            this.cusinfoPanel.Controls.Add(this.bedLabel);
+            this.cusinfoPanel.Controls.Add(this.roomLabel);
+            this.cusinfoPanel.Controls.Add(this.addressLabel);
+            this.cusinfoPanel.Controls.Add(this.nidLabel);
+            this.cusinfoPanel.Controls.Add(this.phnnumLabel);
+            this.cusinfoPanel.Controls.Add(this.dobLabel);
+            this.cusinfoPanel.Controls.Add(this.nationalityLabel);
+            this.cusinfoPanel.Controls.Add(this.genderLabel);
+            this.cusinfoPanel.Controls.Add(this.nameLabel);
+            this.cusinfoPanel.Controls.Add(this.searchButton);
+            this.cusinfoPanel.Controls.Add(this.label1);
+            this.cusinfoPanel.Controls.Add(this.cusinfoDataGridView);
+            this.cusinfoPanel.Location = new System.Drawing.Point(277, 182);
+            this.cusinfoPanel.Name = "cusinfoPanel";
+            this.cusinfoPanel.Size = new System.Drawing.Size(805, 472);
+            this.cusinfoPanel.TabIndex = 4;
+            this.cusinfoPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.cusinfoPanel_Paint);
+            // 
+            // fullpricepaidTextBox
+            // 
+            this.fullpricepaidTextBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fullpricepaidTextBox.Location = new System.Drawing.Point(626, 710);
+            this.fullpricepaidTextBox.Name = "fullpricepaidTextBox";
+            this.fullpricepaidTextBox.Size = new System.Drawing.Size(106, 29);
+            this.fullpricepaidTextBox.TabIndex = 83;
+            // 
+            // cusidTextBox
+            // 
+            this.cusidTextBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cusidTextBox.Location = new System.Drawing.Point(141, 337);
+            this.cusidTextBox.Name = "cusidTextBox";
+            this.cusidTextBox.Size = new System.Drawing.Size(145, 29);
+            this.cusidTextBox.TabIndex = 82;
+            this.cusidTextBox.TextChanged += new System.EventHandler(this.cusidTextBox_TextChanged);
+            // 
+            // fullpricepaidLabel
+            // 
+            this.fullpricepaidLabel.AutoSize = true;
+            this.fullpricepaidLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fullpricepaidLabel.Location = new System.Drawing.Point(622, 678);
+            this.fullpricepaidLabel.Name = "fullpricepaidLabel";
+            this.fullpricepaidLabel.Size = new System.Drawing.Size(140, 22);
+            this.fullpricepaidLabel.TabIndex = 80;
+            this.fullpricepaidLabel.Text = "Full Price paid :";
+            // 
+            // cusidLabel
+            // 
+            this.cusidLabel.AutoSize = true;
+            this.cusidLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cusidLabel.Location = new System.Drawing.Point(11, 339);
+            this.cusidLabel.Name = "cusidLabel";
+            this.cusidLabel.Size = new System.Drawing.Size(126, 22);
+            this.cusidLabel.TabIndex = 78;
+            this.cusidLabel.Text = "Customer ID :";
+            // 
+            // checkoutDateTimePicker
+            // 
+            this.checkoutDateTimePicker.CalendarFont = new System.Drawing.Font("Times New Roman", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkoutDateTimePicker.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkoutDateTimePicker.Location = new System.Drawing.Point(347, 723);
+            this.checkoutDateTimePicker.Name = "checkoutDateTimePicker";
+            this.checkoutDateTimePicker.Size = new System.Drawing.Size(200, 29);
+            this.checkoutDateTimePicker.TabIndex = 77;
+            this.checkoutDateTimePicker.ValueChanged += new System.EventHandler(this.checkoutDateTimePicker_ValueChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(343, 693);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(109, 22);
+            this.label2.TabIndex = 76;
+            this.label2.Text = "Check Out :";
+            // 
+            // checkoutButton
+            // 
+            this.checkoutButton.BackColor = System.Drawing.Color.Tomato;
+            this.checkoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkoutButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkoutButton.Location = new System.Drawing.Point(1043, 726);
+            this.checkoutButton.Name = "checkoutButton";
+            this.checkoutButton.Size = new System.Drawing.Size(110, 44);
+            this.checkoutButton.TabIndex = 75;
+            this.checkoutButton.Text = "Check Out";
+            this.checkoutButton.UseVisualStyleBackColor = false;
+            this.checkoutButton.Click += new System.EventHandler(this.checkoutButton_Click);
+            // 
+            // updateButton
+            // 
+            this.updateButton.BackColor = System.Drawing.Color.Orange;
+            this.updateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateButton.Location = new System.Drawing.Point(919, 726);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(110, 44);
+            this.updateButton.TabIndex = 74;
+            this.updateButton.Text = "Update";
+            this.updateButton.UseVisualStyleBackColor = false;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
+            // 
+            // roomidComboBox
+            // 
+            this.roomidComboBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomidComboBox.FormattingEnabled = true;
+            this.roomidComboBox.Location = new System.Drawing.Point(442, 563);
+            this.roomidComboBox.Name = "roomidComboBox";
+            this.roomidComboBox.Size = new System.Drawing.Size(80, 30);
+            this.roomidComboBox.TabIndex = 73;
+            this.roomidComboBox.SelectedIndexChanged += new System.EventHandler(this.roomidComboBox_SelectedIndexChanged);
+            // 
+            // roomidLabel
+            // 
+            this.roomidLabel.AutoSize = true;
+            this.roomidLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomidLabel.Location = new System.Drawing.Point(342, 566);
+            this.roomidLabel.Name = "roomidLabel";
+            this.roomidLabel.Size = new System.Drawing.Size(95, 22);
+            this.roomidLabel.TabIndex = 72;
+            this.roomidLabel.Text = "Room ID :";
+            // 
+            // priceComboBox
+            // 
+            this.priceComboBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.priceComboBox.FormattingEnabled = true;
+            this.priceComboBox.Location = new System.Drawing.Point(621, 376);
+            this.priceComboBox.Name = "priceComboBox";
+            this.priceComboBox.Size = new System.Drawing.Size(121, 30);
+            this.priceComboBox.TabIndex = 71;
+            this.priceComboBox.SelectedIndexChanged += new System.EventHandler(this.priceComboBox_SelectedIndexChanged);
+            // 
+            // roomnoComboBox
+            // 
+            this.roomnoComboBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomnoComboBox.FormattingEnabled = true;
+            this.roomnoComboBox.Location = new System.Drawing.Point(440, 508);
+            this.roomnoComboBox.Name = "roomnoComboBox";
+            this.roomnoComboBox.Size = new System.Drawing.Size(121, 30);
+            this.roomnoComboBox.TabIndex = 70;
+            this.roomnoComboBox.SelectedIndexChanged += new System.EventHandler(this.roomnoComboBox_SelectedIndexChanged);
+            // 
+            // nidTextBox
+            // 
+            this.nidTextBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nidTextBox.Location = new System.Drawing.Point(86, 707);
+            this.nidTextBox.Name = "nidTextBox";
+            this.nidTextBox.Size = new System.Drawing.Size(119, 29);
+            this.nidTextBox.TabIndex = 69;
+            this.nidTextBox.TextChanged += new System.EventHandler(this.nidTextBox_TextChanged);
+            // 
+            // finalpriceComboBox
+            // 
+            this.finalpriceComboBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.finalpriceComboBox.FormattingEnabled = true;
+            this.finalpriceComboBox.Location = new System.Drawing.Point(621, 630);
+            this.finalpriceComboBox.Name = "finalpriceComboBox";
+            this.finalpriceComboBox.Size = new System.Drawing.Size(121, 30);
+            this.finalpriceComboBox.TabIndex = 68;
+            this.finalpriceComboBox.SelectedIndexChanged += new System.EventHandler(this.finalpriceComboBox_SelectedIndexChanged);
+            // 
+            // bedComboBox
+            // 
+            this.bedComboBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bedComboBox.FormattingEnabled = true;
+            this.bedComboBox.Location = new System.Drawing.Point(416, 391);
+            this.bedComboBox.Name = "bedComboBox";
+            this.bedComboBox.Size = new System.Drawing.Size(121, 30);
+            this.bedComboBox.TabIndex = 67;
+            this.bedComboBox.SelectedIndexChanged += new System.EventHandler(this.bedComboBox_SelectedIndexChanged);
+            // 
+            // discountComboBox
+            // 
+            this.discountComboBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.discountComboBox.FormattingEnabled = true;
+            this.discountComboBox.Items.AddRange(new object[] {
+            "10%",
+            "20%",
+            "30%"});
+            this.discountComboBox.Location = new System.Drawing.Point(622, 471);
+            this.discountComboBox.Name = "discountComboBox";
+            this.discountComboBox.Size = new System.Drawing.Size(92, 30);
+            this.discountComboBox.TabIndex = 66;
+            this.discountComboBox.SelectedIndexChanged += new System.EventHandler(this.discountComboBox_SelectedIndexChanged);
+            // 
+            // advancepaidTextBox
+            // 
+            this.advancepaidTextBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.advancepaidTextBox.Location = new System.Drawing.Point(621, 552);
+            this.advancepaidTextBox.Name = "advancepaidTextBox";
+            this.advancepaidTextBox.Size = new System.Drawing.Size(128, 29);
+            this.advancepaidTextBox.TabIndex = 65;
+            this.advancepaidTextBox.TextChanged += new System.EventHandler(this.advancepaidTextBox_TextChanged);
+            // 
+            // checkinDateTimePicker
+            // 
+            this.checkinDateTimePicker.CalendarFont = new System.Drawing.Font("Times New Roman", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkinDateTimePicker.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkinDateTimePicker.Location = new System.Drawing.Point(346, 642);
+            this.checkinDateTimePicker.Name = "checkinDateTimePicker";
+            this.checkinDateTimePicker.Size = new System.Drawing.Size(200, 29);
+            this.checkinDateTimePicker.TabIndex = 64;
+            this.checkinDateTimePicker.ValueChanged += new System.EventHandler(this.checkinDateTimePicker_ValueChanged);
+            // 
+            // dobDateTimePicker
+            // 
+            this.dobDateTimePicker.CalendarFont = new System.Drawing.Font("Times New Roman", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dobDateTimePicker.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dobDateTimePicker.Location = new System.Drawing.Point(29, 580);
+            this.dobDateTimePicker.Name = "dobDateTimePicker";
+            this.dobDateTimePicker.Size = new System.Drawing.Size(200, 29);
+            this.dobDateTimePicker.TabIndex = 63;
+            this.dobDateTimePicker.ValueChanged += new System.EventHandler(this.dobDateTimePicker_ValueChanged);
+            // 
+            // checkinLabel
+            // 
+            this.checkinLabel.AutoSize = true;
+            this.checkinLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkinLabel.Location = new System.Drawing.Point(342, 612);
+            this.checkinLabel.Name = "checkinLabel";
+            this.checkinLabel.Size = new System.Drawing.Size(95, 22);
+            this.checkinLabel.TabIndex = 62;
+            this.checkinLabel.Text = "Check In :";
+            // 
+            // roomtypeComboBox
+            // 
+            this.roomtypeComboBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomtypeComboBox.FormattingEnabled = true;
+            this.roomtypeComboBox.Items.AddRange(new object[] {
+            "NonAc"});
+            this.roomtypeComboBox.Location = new System.Drawing.Point(440, 448);
+            this.roomtypeComboBox.Name = "roomtypeComboBox";
+            this.roomtypeComboBox.Size = new System.Drawing.Size(121, 30);
+            this.roomtypeComboBox.TabIndex = 61;
+            this.roomtypeComboBox.SelectedIndexChanged += new System.EventHandler(this.roomtypeComboBox_SelectedIndexChanged);
+            // 
+            // genderComboBox
+            // 
+            this.genderComboBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genderComboBox.FormattingEnabled = true;
+            this.genderComboBox.Items.AddRange(new object[] {
+            "Female",
+            "Male"});
+            this.genderComboBox.Location = new System.Drawing.Point(141, 445);
+            this.genderComboBox.Name = "genderComboBox";
+            this.genderComboBox.Size = new System.Drawing.Size(121, 30);
+            this.genderComboBox.TabIndex = 60;
+            this.genderComboBox.SelectedIndexChanged += new System.EventHandler(this.genderComboBox_SelectedIndexChanged);
+            // 
+            // advancepaidLabel
+            // 
+            this.advancepaidLabel.AutoSize = true;
+            this.advancepaidLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.advancepaidLabel.Location = new System.Drawing.Point(617, 516);
+            this.advancepaidLabel.Name = "advancepaidLabel";
+            this.advancepaidLabel.Size = new System.Drawing.Size(132, 22);
+            this.advancepaidLabel.TabIndex = 59;
+            this.advancepaidLabel.Text = "Advance Paid :";
+            // 
+            // addressTextBox
+            // 
+            this.addressTextBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressTextBox.Location = new System.Drawing.Point(416, 338);
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(145, 29);
+            this.addressTextBox.TabIndex = 58;
+            this.addressTextBox.TextChanged += new System.EventHandler(this.addressTextBox_TextChanged);
+            // 
+            // phnnumberTextBox
+            // 
+            this.phnnumberTextBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phnnumberTextBox.Location = new System.Drawing.Point(29, 657);
+            this.phnnumberTextBox.Name = "phnnumberTextBox";
+            this.phnnumberTextBox.Size = new System.Drawing.Size(200, 29);
+            this.phnnumberTextBox.TabIndex = 57;
+            this.phnnumberTextBox.TextChanged += new System.EventHandler(this.phnnumberTextBox_TextChanged);
+            // 
+            // nationalityTextBox
+            // 
+            this.nationalityTextBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nationalityTextBox.Location = new System.Drawing.Point(141, 502);
+            this.nationalityTextBox.Name = "nationalityTextBox";
+            this.nationalityTextBox.Size = new System.Drawing.Size(145, 29);
+            this.nationalityTextBox.TabIndex = 56;
+            this.nationalityTextBox.TextChanged += new System.EventHandler(this.nationalityTextBox_TextChanged);
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameTextBox.Location = new System.Drawing.Point(141, 391);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(145, 29);
+            this.nameTextBox.TabIndex = 55;
+            this.nameTextBox.TextChanged += new System.EventHandler(this.nameTextBox_TextChanged);
+            // 
+            // finalpriceLabel
+            // 
+            this.finalpriceLabel.AutoSize = true;
+            this.finalpriceLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.finalpriceLabel.Location = new System.Drawing.Point(622, 594);
+            this.finalpriceLabel.Name = "finalpriceLabel";
+            this.finalpriceLabel.Size = new System.Drawing.Size(110, 22);
+            this.finalpriceLabel.TabIndex = 54;
+            this.finalpriceLabel.Text = "Final Price :";
+            // 
+            // discountLabel
+            // 
+            this.discountLabel.AutoSize = true;
+            this.discountLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.discountLabel.Location = new System.Drawing.Point(617, 430);
+            this.discountLabel.Name = "discountLabel";
+            this.discountLabel.Size = new System.Drawing.Size(92, 22);
+            this.discountLabel.TabIndex = 53;
+            this.discountLabel.Text = "Discount :";
+            // 
+            // priceLabel
+            // 
+            this.priceLabel.AutoSize = true;
+            this.priceLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.priceLabel.Location = new System.Drawing.Point(618, 339);
+            this.priceLabel.Name = "priceLabel";
+            this.priceLabel.Size = new System.Drawing.Size(63, 22);
+            this.priceLabel.TabIndex = 52;
+            this.priceLabel.Text = "Price :";
+            // 
+            // roomtypeLabel
+            // 
+            this.roomtypeLabel.AutoSize = true;
+            this.roomtypeLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomtypeLabel.Location = new System.Drawing.Point(324, 451);
+            this.roomtypeLabel.Name = "roomtypeLabel";
+            this.roomtypeLabel.Size = new System.Drawing.Size(114, 22);
+            this.roomtypeLabel.TabIndex = 51;
+            this.roomtypeLabel.Text = "Room Type :";
+            // 
+            // bedLabel
+            // 
+            this.bedLabel.AutoSize = true;
+            this.bedLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bedLabel.Location = new System.Drawing.Point(358, 394);
+            this.bedLabel.Name = "bedLabel";
+            this.bedLabel.Size = new System.Drawing.Size(52, 22);
+            this.bedLabel.TabIndex = 50;
+            this.bedLabel.Text = "Bed :";
+            // 
+            // roomLabel
+            // 
+            this.roomLabel.AutoSize = true;
+            this.roomLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomLabel.Location = new System.Drawing.Point(340, 511);
+            this.roomLabel.Name = "roomLabel";
+            this.roomLabel.Size = new System.Drawing.Size(98, 22);
+            this.roomLabel.TabIndex = 49;
+            this.roomLabel.Text = "Room No :";
+            // 
+            // addressLabel
+            // 
+            this.addressLabel.AutoSize = true;
+            this.addressLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressLabel.Location = new System.Drawing.Point(324, 341);
+            this.addressLabel.Name = "addressLabel";
+            this.addressLabel.Size = new System.Drawing.Size(86, 22);
+            this.addressLabel.TabIndex = 48;
+            this.addressLabel.Text = "Address :";
+            // 
+            // nidLabel
+            // 
+            this.nidLabel.AutoSize = true;
+            this.nidLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nidLabel.Location = new System.Drawing.Point(25, 707);
+            this.nidLabel.Name = "nidLabel";
+            this.nidLabel.Size = new System.Drawing.Size(55, 22);
+            this.nidLabel.TabIndex = 47;
+            this.nidLabel.Text = "NID :";
+            // 
+            // phnnumLabel
+            // 
+            this.phnnumLabel.AutoSize = true;
+            this.phnnumLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phnnumLabel.Location = new System.Drawing.Point(25, 624);
+            this.phnnumLabel.Name = "phnnumLabel";
+            this.phnnumLabel.Size = new System.Drawing.Size(142, 22);
+            this.phnnumLabel.TabIndex = 46;
+            this.phnnumLabel.Text = "Phone Number :";
+            // 
+            // dobLabel
+            // 
+            this.dobLabel.AutoSize = true;
+            this.dobLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dobLabel.Location = new System.Drawing.Point(25, 549);
+            this.dobLabel.Name = "dobLabel";
+            this.dobLabel.Size = new System.Drawing.Size(132, 22);
+            this.dobLabel.TabIndex = 45;
+            this.dobLabel.Text = "Date Of Birth :";
+            // 
+            // nationalityLabel
+            // 
+            this.nationalityLabel.AutoSize = true;
+            this.nationalityLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nationalityLabel.Location = new System.Drawing.Point(25, 505);
+            this.nationalityLabel.Name = "nationalityLabel";
+            this.nationalityLabel.Size = new System.Drawing.Size(110, 22);
+            this.nationalityLabel.TabIndex = 44;
+            this.nationalityLabel.Text = "Nationality :";
+            // 
+            // genderLabel
+            // 
+            this.genderLabel.AutoSize = true;
+            this.genderLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genderLabel.Location = new System.Drawing.Point(54, 448);
+            this.genderLabel.Name = "genderLabel";
+            this.genderLabel.Size = new System.Drawing.Size(81, 22);
+            this.genderLabel.TabIndex = 43;
+            this.genderLabel.Text = "Gender :";
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel.Location = new System.Drawing.Point(67, 393);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(68, 22);
+            this.nameLabel.TabIndex = 42;
+            this.nameLabel.Text = "Name :";
+            // 
+            // searchButton
+            // 
+            this.searchButton.BackColor = System.Drawing.Color.SteelBlue;
+            this.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchButton.Location = new System.Drawing.Point(793, 726);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(110, 44);
+            this.searchButton.TabIndex = 2;
+            this.searchButton.Text = "Search";
+            this.searchButton.UseVisualStyleBackColor = false;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(13, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(305, 31);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Customers Information :";
+            // 
+            // cusinfoDataGridView
+            // 
+            this.cusinfoDataGridView.AllowUserToAddRows = false;
+            this.cusinfoDataGridView.AllowUserToDeleteRows = false;
+            this.cusinfoDataGridView.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.cusinfoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cusinfoDataGridView.Location = new System.Drawing.Point(18, 61);
+            this.cusinfoDataGridView.Name = "cusinfoDataGridView";
+            this.cusinfoDataGridView.ReadOnly = true;
+            this.cusinfoDataGridView.Size = new System.Drawing.Size(1426, 253);
+            this.cusinfoDataGridView.TabIndex = 0;
+            //this.cusinfoDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cusinfoDataGridView_CellContentClick);
+            // 
             // uC_Booking1
             // 
             this.uC_Booking1.BackColor = System.Drawing.Color.PaleGoldenrod;
@@ -397,9 +941,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::RioHotel.Properties.Resources.BG;
             this.ClientSize = new System.Drawing.Size(1090, 666);
-            this.Controls.Add(this.uC_Booking1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.cusinfoPanel);
+            this.Controls.Add(this.uC_Booking1);
             this.Controls.Add(this.auC_Rooms1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -420,6 +965,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.cusinfoPanel.ResumeLayout(false);
+            this.cusinfoPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cusinfoDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -454,5 +1002,49 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private All_Users_Control.AUC_Rooms auC_Rooms1;
         private All_Users_Control.UC_Booking uC_Booking1;
+        private System.Windows.Forms.Panel cusinfoPanel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView cusinfoDataGridView;
+        private System.Windows.Forms.Button searchButton;
+        private System.Windows.Forms.Button checkoutButton;
+        private System.Windows.Forms.Button updateButton;
+        private System.Windows.Forms.ComboBox roomidComboBox;
+        private System.Windows.Forms.Label roomidLabel;
+        private System.Windows.Forms.ComboBox priceComboBox;
+        private System.Windows.Forms.ComboBox roomnoComboBox;
+        private System.Windows.Forms.TextBox nidTextBox;
+        private System.Windows.Forms.ComboBox finalpriceComboBox;
+        private System.Windows.Forms.ComboBox bedComboBox;
+        private System.Windows.Forms.ComboBox discountComboBox;
+        private System.Windows.Forms.TextBox advancepaidTextBox;
+        private System.Windows.Forms.DateTimePicker checkinDateTimePicker;
+        private System.Windows.Forms.DateTimePicker dobDateTimePicker;
+        private System.Windows.Forms.Label checkinLabel;
+        private System.Windows.Forms.ComboBox roomtypeComboBox;
+        private System.Windows.Forms.ComboBox genderComboBox;
+        private System.Windows.Forms.Label advancepaidLabel;
+        private System.Windows.Forms.TextBox addressTextBox;
+        private System.Windows.Forms.TextBox phnnumberTextBox;
+        private System.Windows.Forms.TextBox nationalityTextBox;
+        private System.Windows.Forms.TextBox nameTextBox;
+        private System.Windows.Forms.Label finalpriceLabel;
+        private System.Windows.Forms.Label discountLabel;
+        private System.Windows.Forms.Label priceLabel;
+        private System.Windows.Forms.Label roomtypeLabel;
+        private System.Windows.Forms.Label bedLabel;
+        private System.Windows.Forms.Label roomLabel;
+        private System.Windows.Forms.Label addressLabel;
+        private System.Windows.Forms.Label nidLabel;
+        private System.Windows.Forms.Label phnnumLabel;
+        private System.Windows.Forms.Label dobLabel;
+        private System.Windows.Forms.Label nationalityLabel;
+        private System.Windows.Forms.Label genderLabel;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.Label cusidLabel;
+        private System.Windows.Forms.DateTimePicker checkoutDateTimePicker;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label fullpricepaidLabel;
+        private System.Windows.Forms.TextBox cusidTextBox;
+        private System.Windows.Forms.TextBox fullpricepaidTextBox;
     }
 }

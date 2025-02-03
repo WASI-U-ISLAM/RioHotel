@@ -83,6 +83,7 @@
             this.nameLabel.Size = new System.Drawing.Size(68, 22);
             this.nameLabel.TabIndex = 1;
             this.nameLabel.Text = "Name :";
+            this.nameLabel.Click += new System.EventHandler(this.nameLabel_Click);
             // 
             // genderLabel
             // 
@@ -93,6 +94,7 @@
             this.genderLabel.Size = new System.Drawing.Size(81, 22);
             this.genderLabel.TabIndex = 2;
             this.genderLabel.Text = "Gender :";
+            this.genderLabel.Click += new System.EventHandler(this.genderLabel_Click);
             // 
             // nationalityLabel
             // 
@@ -103,6 +105,7 @@
             this.nationalityLabel.Size = new System.Drawing.Size(110, 22);
             this.nationalityLabel.TabIndex = 3;
             this.nationalityLabel.Text = "Nationality :";
+            this.nationalityLabel.Click += new System.EventHandler(this.nationalityLabel_Click);
             // 
             // dobLabel
             // 
@@ -113,6 +116,7 @@
             this.dobLabel.Size = new System.Drawing.Size(132, 22);
             this.dobLabel.TabIndex = 4;
             this.dobLabel.Text = "Date Of Birth :";
+            this.dobLabel.Click += new System.EventHandler(this.dobLabel_Click);
             // 
             // phnnumLabel
             // 
@@ -123,6 +127,7 @@
             this.phnnumLabel.Size = new System.Drawing.Size(142, 22);
             this.phnnumLabel.TabIndex = 5;
             this.phnnumLabel.Text = "Phone Number :";
+            this.phnnumLabel.Click += new System.EventHandler(this.phnnumLabel_Click);
             // 
             // nidLabel
             // 
@@ -133,6 +138,7 @@
             this.nidLabel.Size = new System.Drawing.Size(55, 22);
             this.nidLabel.TabIndex = 6;
             this.nidLabel.Text = "NID :";
+            this.nidLabel.Click += new System.EventHandler(this.nidLabel_Click);
             // 
             // addressLabel
             // 
@@ -143,6 +149,7 @@
             this.addressLabel.Size = new System.Drawing.Size(86, 22);
             this.addressLabel.TabIndex = 7;
             this.addressLabel.Text = "Address :";
+            this.addressLabel.Click += new System.EventHandler(this.addressLabel_Click);
             // 
             // roomLabel
             // 
@@ -153,6 +160,7 @@
             this.roomLabel.Size = new System.Drawing.Size(98, 22);
             this.roomLabel.TabIndex = 8;
             this.roomLabel.Text = "Room No :";
+            this.roomLabel.Click += new System.EventHandler(this.roomLabel_Click);
             // 
             // bedLabel
             // 
@@ -163,6 +171,7 @@
             this.bedLabel.Size = new System.Drawing.Size(52, 22);
             this.bedLabel.TabIndex = 9;
             this.bedLabel.Text = "Bed :";
+            this.bedLabel.Click += new System.EventHandler(this.bedLabel_Click);
             // 
             // roomtypeLabel
             // 
@@ -173,6 +182,7 @@
             this.roomtypeLabel.Size = new System.Drawing.Size(114, 22);
             this.roomtypeLabel.TabIndex = 10;
             this.roomtypeLabel.Text = "Room Type :";
+            this.roomtypeLabel.Click += new System.EventHandler(this.roomtypeLabel_Click);
             // 
             // priceLabel
             // 
@@ -183,6 +193,7 @@
             this.priceLabel.Size = new System.Drawing.Size(63, 22);
             this.priceLabel.TabIndex = 11;
             this.priceLabel.Text = "Price :";
+            this.priceLabel.Click += new System.EventHandler(this.priceLabel_Click);
             // 
             // discountLabel
             // 
@@ -193,6 +204,7 @@
             this.discountLabel.Size = new System.Drawing.Size(92, 22);
             this.discountLabel.TabIndex = 12;
             this.discountLabel.Text = "Discount :";
+            this.discountLabel.Click += new System.EventHandler(this.discountLabel_Click);
             // 
             // finalpriceLabel
             // 
@@ -203,6 +215,7 @@
             this.finalpriceLabel.Size = new System.Drawing.Size(110, 22);
             this.finalpriceLabel.TabIndex = 13;
             this.finalpriceLabel.Text = "Final Price :";
+            this.finalpriceLabel.Click += new System.EventHandler(this.finalpriceLabel_Click);
             // 
             // nameTextBox
             // 
@@ -211,6 +224,7 @@
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(145, 29);
             this.nameTextBox.TabIndex = 14;
+            this.nameTextBox.TextChanged += new System.EventHandler(this.nameTextBox_TextChanged);
             // 
             // nationalityTextBox
             // 
@@ -219,6 +233,7 @@
             this.nationalityTextBox.Name = "nationalityTextBox";
             this.nationalityTextBox.Size = new System.Drawing.Size(145, 29);
             this.nationalityTextBox.TabIndex = 15;
+            this.nationalityTextBox.TextChanged += new System.EventHandler(this.nationalityTextBox_TextChanged);
             // 
             // phnnumberTextBox
             // 
@@ -227,6 +242,7 @@
             this.phnnumberTextBox.Name = "phnnumberTextBox";
             this.phnnumberTextBox.Size = new System.Drawing.Size(200, 29);
             this.phnnumberTextBox.TabIndex = 16;
+            this.phnnumberTextBox.TextChanged += new System.EventHandler(this.phnnumberTextBox_TextChanged);
             // 
             // addressTextBox
             // 
@@ -235,6 +251,7 @@
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(145, 29);
             this.addressTextBox.TabIndex = 18;
+            this.addressTextBox.TextChanged += new System.EventHandler(this.addressTextBox_TextChanged);
             // 
             // advancepaidLabel
             // 
@@ -245,6 +262,7 @@
             this.advancepaidLabel.Size = new System.Drawing.Size(132, 22);
             this.advancepaidLabel.TabIndex = 19;
             this.advancepaidLabel.Text = "Advance Paid :";
+            this.advancepaidLabel.Click += new System.EventHandler(this.advancepaidLabel_Click);
             // 
             // genderComboBox
             // 
@@ -257,6 +275,7 @@
             this.genderComboBox.Name = "genderComboBox";
             this.genderComboBox.Size = new System.Drawing.Size(121, 30);
             this.genderComboBox.TabIndex = 20;
+            this.genderComboBox.SelectedIndexChanged += new System.EventHandler(this.genderComboBox_SelectedIndexChanged);
             // 
             // roomtypeComboBox
             // 
@@ -279,6 +298,7 @@
             this.checkinLabel.Size = new System.Drawing.Size(95, 22);
             this.checkinLabel.TabIndex = 28;
             this.checkinLabel.Text = "Check In :";
+            this.checkinLabel.Click += new System.EventHandler(this.checkinLabel_Click);
             // 
             // dobDateTimePicker
             // 
@@ -288,6 +308,7 @@
             this.dobDateTimePicker.Name = "dobDateTimePicker";
             this.dobDateTimePicker.Size = new System.Drawing.Size(200, 29);
             this.dobDateTimePicker.TabIndex = 29;
+            this.dobDateTimePicker.ValueChanged += new System.EventHandler(this.dobDateTimePicker_ValueChanged);
             // 
             // checkinDateTimePicker
             // 
@@ -297,6 +318,7 @@
             this.checkinDateTimePicker.Name = "checkinDateTimePicker";
             this.checkinDateTimePicker.Size = new System.Drawing.Size(200, 29);
             this.checkinDateTimePicker.TabIndex = 30;
+            this.checkinDateTimePicker.ValueChanged += new System.EventHandler(this.checkinDateTimePicker_ValueChanged);
             // 
             // advancepaidTextBox
             // 
@@ -332,6 +354,7 @@
             this.discountComboBox.Name = "discountComboBox";
             this.discountComboBox.Size = new System.Drawing.Size(92, 30);
             this.discountComboBox.TabIndex = 34;
+            this.discountComboBox.SelectedIndexChanged += new System.EventHandler(this.discountComboBox_SelectedIndexChanged_1);
             // 
             // bedComboBox
             // 
@@ -351,6 +374,7 @@
             this.finalpriceComboBox.Name = "finalpriceComboBox";
             this.finalpriceComboBox.Size = new System.Drawing.Size(121, 30);
             this.finalpriceComboBox.TabIndex = 36;
+            this.finalpriceComboBox.SelectedIndexChanged += new System.EventHandler(this.finalpriceComboBox_SelectedIndexChanged);
             // 
             // nidTextBox
             // 
@@ -359,6 +383,7 @@
             this.nidTextBox.Name = "nidTextBox";
             this.nidTextBox.Size = new System.Drawing.Size(119, 29);
             this.nidTextBox.TabIndex = 37;
+            this.nidTextBox.TextChanged += new System.EventHandler(this.nidTextBox_TextChanged);
             // 
             // roomnoComboBox
             // 
@@ -368,6 +393,7 @@
             this.roomnoComboBox.Name = "roomnoComboBox";
             this.roomnoComboBox.Size = new System.Drawing.Size(121, 30);
             this.roomnoComboBox.TabIndex = 38;
+            this.roomnoComboBox.SelectedIndexChanged += new System.EventHandler(this.roomnoComboBox_SelectedIndexChanged_1);
             // 
             // priceComboBox
             // 
@@ -377,6 +403,7 @@
             this.priceComboBox.Name = "priceComboBox";
             this.priceComboBox.Size = new System.Drawing.Size(121, 30);
             this.priceComboBox.TabIndex = 39;
+            this.priceComboBox.SelectedIndexChanged += new System.EventHandler(this.priceComboBox_SelectedIndexChanged);
             // 
             // roomidComboBox
             // 
