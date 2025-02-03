@@ -246,25 +246,97 @@ namespace RioHotel
             {
                 try
                 {
-                    int cid = Convert.ToInt32(cusinfoDataGridView.SelectedRows[0].Cells["cid"].Value);
-                    string name = cusinfoDataGridView.SelectedRows[0].Cells["cname"].Value.ToString();
-                    string roomid = cusinfoDataGridView.SelectedRows[0].Cells["roomid"].Value.ToString();
-                    string nationality = cusinfoDataGridView.SelectedRows[0].Cells["nationality"].Value == DBNull.Value ? "Unknown" : cusinfoDataGridView.SelectedRows[0].Cells["nationality"].Value.ToString(); // Handle NULL Nationality
-                    string checkoutDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                    // Extract values safely
+                    int cid = Convert.ToInt32(cusinfoDataGridView.SelectedRows[0].Cells["cid"].Value ?? 0);
+                    string cname = cusinfoDataGridView.SelectedRows[0].Cells["cname"].Value?.ToString() ?? "Unknown";
+                    string nationality = cusinfoDataGridView.SelectedRows[0].Cells["nationality"].Value?.ToString() ?? "Unknown";
+                    string phoneNum = cusinfoDataGridView.SelectedRows[0].Cells["phoneNum"].Value?.ToString() ?? "N/A";
+                    string nid = cusinfoDataGridView.SelectedRows[0].Cells["nid"].Value?.ToString() ?? "N/A";
+                    string address = cusinfoDataGridView.SelectedRows[0].Cells["address"].Value?.ToString() ?? "N/A";
+                    string gender = cusinfoDataGridView.SelectedRows[0].Cells["gender"].Value?.ToString() ?? "N/A";
+                    string roomid = cusinfoDataGridView.SelectedRows[0].Cells["roomid"].Value?.ToString() ?? "Unknown";
+                    string roomNo = cusinfoDataGridView.SelectedRows[0].Cells["roomNo"].Value?.ToString() ?? "Unknown";
 
-                    // Insert query to include Nationality
-                    string insertQuery = "INSERT INTO checkout (cid, cname, roomid, nationality, checkedout) VALUES (" + cid + ", '" + name + "', '" + roomid + "', '" + nationality + "', '" + checkoutDate + "')";
-                    fn.setData(insertQuery, "Customer checked out successfully!");
+                    // Parse DateTime safely
+                    DateTime checkin = DateTime.TryParse(cusinfoDataGridView.SelectedRows[0].Cells["checkin"].Value?.ToString(), out DateTime tempCheckin) ? tempCheckin : DateTime.Now;
+                    DateTime checkout = DateTime.Now; // Assuming checkout is now
+
+                    // Check if dob is null
+                    object dobValue = cusinfoDataGridView.SelectedRows[0].Cells["dob"].Value;
+                    if (dobValue == null || dobValue == DBNull.Value || !DateTime.TryParse(dobValue.ToString(), out DateTime dob))
+                    {
+                        MessageBox.Show("Date of birth (DOB) is missing or invalid. Please check the selected customer.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    // Parse decimal values safely
+                    decimal price = decimal.TryParse(cusinfoDataGridView.SelectedRows[0].Cells["price"].Value?.ToString(), out decimal tempPrice) ? tempPrice : 0;
+                    decimal discount = decimal.TryParse(cusinfoDataGridView.SelectedRows[0].Cells["discount"].Value?.ToString(), out decimal tempDiscount) ? tempDiscount : 0;
+                    decimal advancePaid = decimal.TryParse(cusinfoDataGridView.SelectedRows[0].Cells["advancePaid"].Value?.ToString(), out decimal tempAdvance) ? tempAdvance : 0;
+                    decimal finalPrice = decimal.TryParse(cusinfoDataGridView.SelectedRows[0].Cells["finalPrice"].Value?.ToString(), out decimal tempFinal) ? tempFinal : 0;
+                    decimal fullpricePaid = decimal.TryParse(cusinfoDataGridView.SelectedRows[0].Cells["fullpricePaid"].Value?.ToString(), out decimal tempFull) ? tempFull : 0;
+
+                    // SQL Insert Query with Parameterized Query
+                    string insertQuery = "INSERT INTO checkout (cid, cname, nationality, dob, phoneNum, nid, address, gender, roomid, roomNo, checkin, checkout, checkedout, price, discount, advancePaid, finalPrice, fullpricePaid) " +
+                                         "VALUES (@cid, @cname, @nationality, @dob, @phoneNum, @nid, @address, @gender, @roomid, @roomNo, @checkin, @checkout, @checkedout, @price, @discount, @advancePaid, @finalPrice, @fullpricePaid)";
+
+                    using (SqlConnection conn = new SqlConnection(connectionString)) // Use the actual connection string
+                    {
+                        conn.Open();
+                        using (SqlCommand cmd = new SqlCommand(insertQuery, conn))
+                        {
+                            // Assign Parameters
+                            cmd.Parameters.AddWithValue("@cid", cid);
+                            cmd.Parameters.AddWithValue("@cname", cname);
+                            cmd.Parameters.AddWithValue("@nationality", nationality);
+                            cmd.Parameters.AddWithValue("@dob", dob);
+                            cmd.Parameters.AddWithValue("@phoneNum", phoneNum);
+                            cmd.Parameters.AddWithValue("@nid", nid);
+                            cmd.Parameters.AddWithValue("@address", address);
+                            cmd.Parameters.AddWithValue("@gender", gender);
+                            cmd.Parameters.AddWithValue("@roomid", roomid);
+                            cmd.Parameters.AddWithValue("@roomNo", roomNo);
+                            cmd.Parameters.AddWithValue("@checkin", checkin);
+                            cmd.Parameters.AddWithValue("@checkout", checkout);
+                            cmd.Parameters.AddWithValue("@checkedout", DateTime.Now);
+                            cmd.Parameters.AddWithValue("@price", price);
+                            cmd.Parameters.AddWithValue("@discount", discount);
+                            cmd.Parameters.AddWithValue("@advancePaid", advancePaid);
+                            cmd.Parameters.AddWithValue("@finalPrice", finalPrice);
+                            cmd.Parameters.AddWithValue("@fullpricePaid", fullpricePaid);
+
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+
+                    MessageBox.Show("Customer checked out successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Delete customer from customers table
-                    string deleteQuery = "DELETE FROM customers WHERE cid = " + cid;
-                    fn.setData(deleteQuery, "Customer removed from active records.");
+                    string deleteQuery = "DELETE FROM customers WHERE cid = @cid";
+                    using (SqlConnection conn = new SqlConnection(connectionString)) // Use the actual connection string
+                    {
+                        conn.Open();
+                        using (SqlCommand cmd = new SqlCommand(deleteQuery, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@cid", cid);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
 
                     // Delete room from rooms table
-                    string deleteRoomQuery = "DELETE FROM rooms WHERE roomid = '" + roomid + "'";
-                    fn.setData(deleteRoomQuery, "Room removed from active records.");
+                    string deleteRoomQuery = "DELETE FROM rooms WHERE roomid = @roomid";
+                    using (SqlConnection conn = new SqlConnection(connectionString)) // Use the actual connection string
+                    {
+                        conn.Open();
+                        using (SqlCommand cmd = new SqlCommand(deleteRoomQuery, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@roomid", roomid);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
 
-                    searchButton.PerformClick(); // Refresh DataGrid
+                    // Refresh DataGrid
+                    searchButton.PerformClick();
                 }
                 catch (Exception ex)
                 {
@@ -362,32 +434,35 @@ namespace RioHotel
 
         private void updateButton_Click(object sender, EventArgs e)
         {
-            if (cusinfoDataGridView.SelectedRows.Count > 0)
-            {
-                try
-                {
-                    int cid = Convert.ToInt32(cusinfoDataGridView.SelectedRows[0].Cells["cid"].Value);
-                    string name = nameTextBox.Text;
-                    string phone = phnnumberTextBox.Text;
-                    string address = addressTextBox.Text;
-                    string nationality = string.IsNullOrEmpty(nationalityTextBox.Text) ? "Unknown" : nationalityTextBox.Text; // Handle NULL Nationality
-                    string checkedout = checkoutComboBox.SelectedItem.ToString();
-                    string checkin = checkinDateTimePicker.Value.ToString("yyyy-MM-dd");
-
-                    // Update query to include Nationality
-                    string query = "UPDATE customers SET cname = '" + name + "', phoneNum = '" + phone + "', address = '" + address + "', nationality = '" + nationality + "', checkedout = '" + checkedout + "', checkin = '" + checkin + "' WHERE cid = " + cid;
-                    fn.setData(query, "Customer details updated successfully!");
-
-                    searchButton.PerformClick(); // Refresh DataGrid
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error updating customer details: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
+            if (cusinfoDataGridView.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Select a customer to update", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                int cid = Convert.ToInt32(cusinfoDataGridView.SelectedRows[0].Cells["cid"].Value);
+                string name = nameTextBox.Text;
+                string phone = phnnumberTextBox.Text;
+                string address = addressTextBox.Text;
+                string nationality = string.IsNullOrEmpty(nationalityTextBox.Text) ? "Unknown" : nationalityTextBox.Text;
+                string checkedout = checkoutComboBox.SelectedItem != null ? checkoutComboBox.SelectedItem.ToString() : "NO";
+                string checkin = checkinDateTimePicker.Value.ToString("yyyy-MM-dd");
+
+                string query = $"UPDATE customers SET cname = '{name}', phoneNum = '{phone}', address = '{address}', nationality = '{nationality}', checkedout = '{checkedout}', checkin = '{checkin}' WHERE cid = {cid}";
+
+                fn.setData(query, "Customer details updated successfully!");
+
+                searchButton.PerformClick(); // Refresh DataGrid
+            }
+            catch (NullReferenceException ex)
+            {
+                MessageBox.Show("A required field is missing. Please check your inputs.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error updating customer details: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
