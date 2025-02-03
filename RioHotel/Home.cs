@@ -274,5 +274,10 @@ namespace RioHotel
         {
 
         }
+
+        private void checkoutComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

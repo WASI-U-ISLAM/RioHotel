@@ -102,6 +102,8 @@
             this.cusinfoDataGridView = new System.Windows.Forms.DataGridView();
             this.uC_Booking1 = new RioHotel.All_Users_Control.UC_Booking();
             this.auC_Rooms1 = new RioHotel.All_Users_Control.AUC_Rooms();
+            this.checkoutComboBox = new System.Windows.Forms.ComboBox();
+            this.checkedlabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -163,7 +165,6 @@
             this.usernamelabel.Size = new System.Drawing.Size(24, 26);
             this.usernamelabel.TabIndex = 8;
             this.usernamelabel.Text = "?";
-            //this.usernamelabel.Click += new System.EventHandler(this.usernamelabel_Click);
             // 
             // datetimeLabel
             // 
@@ -426,6 +427,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cusinfoPanel.AutoScroll = true;
             this.cusinfoPanel.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.cusinfoPanel.Controls.Add(this.checkoutComboBox);
+            this.cusinfoPanel.Controls.Add(this.checkedlabel);
             this.cusinfoPanel.Controls.Add(this.fullpricepaidTextBox);
             this.cusinfoPanel.Controls.Add(this.cusidTextBox);
             this.cusinfoPanel.Controls.Add(this.fullpricepaidLabel);
@@ -915,7 +918,6 @@
             this.cusinfoDataGridView.ReadOnly = true;
             this.cusinfoDataGridView.Size = new System.Drawing.Size(1426, 253);
             this.cusinfoDataGridView.TabIndex = 0;
-            //this.cusinfoDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cusinfoDataGridView_CellContentClick);
             // 
             // uC_Booking1
             // 
@@ -934,6 +936,26 @@
             this.auC_Rooms1.Size = new System.Drawing.Size(803, 472);
             this.auC_Rooms1.TabIndex = 2;
             this.auC_Rooms1.Load += new System.EventHandler(this.auC_Rooms1_Load);
+            // 
+            // checkoutComboBox
+            // 
+            this.checkoutComboBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkoutComboBox.FormattingEnabled = true;
+            this.checkoutComboBox.Location = new System.Drawing.Point(792, 376);
+            this.checkoutComboBox.Name = "checkoutComboBox";
+            this.checkoutComboBox.Size = new System.Drawing.Size(121, 30);
+            this.checkoutComboBox.TabIndex = 85;
+            this.checkoutComboBox.SelectedIndexChanged += new System.EventHandler(this.checkoutComboBox_SelectedIndexChanged);
+            // 
+            // checkedlabel
+            // 
+            this.checkedlabel.AutoSize = true;
+            this.checkedlabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedlabel.Location = new System.Drawing.Point(789, 339);
+            this.checkedlabel.Name = "checkedlabel";
+            this.checkedlabel.Size = new System.Drawing.Size(92, 22);
+            this.checkedlabel.TabIndex = 84;
+            this.checkedlabel.Text = "Checked :";
             // 
             // Home
             // 
@@ -1046,5 +1068,7 @@
         private System.Windows.Forms.Label fullpricepaidLabel;
         private System.Windows.Forms.TextBox cusidTextBox;
         private System.Windows.Forms.TextBox fullpricepaidTextBox;
+        private System.Windows.Forms.ComboBox checkoutComboBox;
+        private System.Windows.Forms.Label checkedlabel;
     }
 }
