@@ -64,6 +64,12 @@
     <Compile Include="Admin Control\AC_Users.Designer.cs">
       <DependentUpon>AC_Users.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin Control\AUC_checkout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Control\AUC_checkout.Designer.cs">
+      <DependentUpon>AUC_checkout.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin Control\AC_Users.resx">
       <DependentUpon>AC_Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Control\AUC_checkout.resx">
+      <DependentUpon>AUC_checkout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>

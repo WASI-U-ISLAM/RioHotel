@@ -44,6 +44,8 @@
             this.roomsButton = new System.Windows.Forms.Button();
             this.logoutButton = new System.Windows.Forms.Button();
             this.usersButton = new System.Windows.Forms.Button();
+            this.auC_checkout1 = new RioHotel.Admin_Control.AUC_checkout();
+            this.aC_Booking1 = new RioHotel.Admin_Control.AC_Booking();
             this.aC_Rooms1 = new RioHotel.Admin_Control.AC_Rooms();
             this.aC_Users1 = new RioHotel.Admin_Control.AC_Users();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -101,6 +103,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1093, 138);
             this.panel1.TabIndex = 15;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel4
             // 
@@ -189,7 +192,7 @@
             this.guestsbutton.Name = "guestsbutton";
             this.guestsbutton.Size = new System.Drawing.Size(182, 52);
             this.guestsbutton.TabIndex = 21;
-            this.guestsbutton.Text = "Guests";
+            this.guestsbutton.Text = "CheckedOut";
             this.guestsbutton.UseVisualStyleBackColor = true;
             this.guestsbutton.Click += new System.EventHandler(this.guestsbutton_Click);
             // 
@@ -204,7 +207,7 @@
             this.bookingButton.Name = "bookingButton";
             this.bookingButton.Size = new System.Drawing.Size(182, 52);
             this.bookingButton.TabIndex = 20;
-            this.bookingButton.Text = "Booking";
+            this.bookingButton.Text = "Customers";
             this.bookingButton.UseVisualStyleBackColor = true;
             this.bookingButton.Click += new System.EventHandler(this.bookingButton_Click);
             // 
@@ -251,6 +254,26 @@
             this.usersButton.UseVisualStyleBackColor = true;
             this.usersButton.Click += new System.EventHandler(this.usersButton_Click);
             // 
+            // auC_checkout1
+            // 
+            this.auC_checkout1.AutoScroll = true;
+            this.auC_checkout1.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.auC_checkout1.Location = new System.Drawing.Point(276, 144);
+            this.auC_checkout1.Name = "auC_checkout1";
+            this.auC_checkout1.Size = new System.Drawing.Size(786, 511);
+            this.auC_checkout1.TabIndex = 20;
+            this.auC_checkout1.Load += new System.EventHandler(this.auC_checkout1_Load);
+            // 
+            // aC_Booking1
+            // 
+            this.aC_Booking1.AutoScroll = true;
+            this.aC_Booking1.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.aC_Booking1.Location = new System.Drawing.Point(275, 142);
+            this.aC_Booking1.Name = "aC_Booking1";
+            this.aC_Booking1.Size = new System.Drawing.Size(803, 511);
+            this.aC_Booking1.TabIndex = 19;
+            this.aC_Booking1.Load += new System.EventHandler(this.aC_Booking1_Load);
+            // 
             // aC_Rooms1
             // 
             this.aC_Rooms1.BackColor = System.Drawing.Color.PaleGoldenrod;
@@ -278,9 +301,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1090, 666);
+            this.Controls.Add(this.auC_checkout1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.aC_Booking1);
             this.Controls.Add(this.aC_Rooms1);
             this.Controls.Add(this.aC_Users1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -318,5 +343,7 @@
         private System.Windows.Forms.Button roomsButton;
         private System.Windows.Forms.Panel movePanel;
         private Admin_Control.AC_Rooms aC_Rooms1;
+        private Admin_Control.AC_Booking aC_Booking1;
+        private Admin_Control.AUC_checkout auC_checkout1;
     }
 }
